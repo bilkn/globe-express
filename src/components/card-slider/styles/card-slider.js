@@ -22,4 +22,6 @@ export const Title = styled.h2`
   font-size: 1rem;
   margin-bottom: 1rem;
 `;
-export const Subtitle = styled.h3``;
+export const Subtitle = styled.h3`
+  text-transform: uppercase;
+`;

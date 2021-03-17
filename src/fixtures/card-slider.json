@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/img-1.jpg",
+    "title": "Saharan Desert",
+    "subtitle": "Marrakech Merzouga"
+  },
+  {
+    "id": 2,
+    "image": "/images/img-2.jpg",
+    "title": "Japan Alpha",
+    "subtitle": "Nagano Prefecture"
+  },
+  {
+    "id": 3,
+    "image": "//images/img-3.jpg",
+    "title": "Tarife - Spain",
+    "subtitle": "Los Lances Beach"
+  },
+  {
+    "id": 4,
+    "image": "/images/img-4.jpg",
+    "title": "Sierra Nevada",
+    "subtitle": "Yosemite National Park"
+  }
+]
