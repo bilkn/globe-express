@@ -2,7 +2,7 @@ import React from 'react';
 import { Content } from '../components';
 import { CardSlider } from '../components';
 import { Hero } from '../components';
-/* import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark'; */
+import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark';
 
 export function ContentContainer() {
   return (
@@ -15,11 +15,13 @@ export function ContentContainer() {
           id necessitatibus perferendis sunt nam.
         </Hero.Text>
         <Hero.Box>
-          <Hero.Button></Hero.Button>
+          <Hero.Button>
+            <Bookmark size="24"/>
+          </Hero.Button>
           <Hero.Button>DISORDER LOCATION</Hero.Button>
         </Hero.Box>
       </Hero>
-       <CardSlider>
+      <CardSlider>
         <CardSlider.Card>
           <CardSlider.Title>Japan Alpha</CardSlider.Title>
           <CardSlider.Subtitle>NAGANO PREFECTURE</CardSlider.Subtitle>
@@ -36,7 +38,7 @@ export function ContentContainer() {
           <CardSlider.Title>Tarife - Spain</CardSlider.Title>
           <CardSlider.Subtitle>LOS LANCES BEACH</CardSlider.Subtitle>
         </CardSlider.Card>
-      </CardSlider> 
+      </CardSlider>
     </Content>
   );
 }

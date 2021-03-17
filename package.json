@@ -9,7 +9,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "styled-icons": "^10.29.0"
   },
   "scripts": {
     "start": "set PORT=3002 && react-scripts start",

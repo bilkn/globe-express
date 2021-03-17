@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+} 
 html, body {
         color: #333;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8,5 +13,11 @@ html, body {
         height:100%;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
+        overflow: hidden;
     }
+
+    li {
+        list-style: none;
+    }
+
 `;
