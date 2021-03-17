@@ -5,7 +5,7 @@ import { Download } from '@styled-icons/entypo/Download';
 export function HeaderContainer({ children }) {
   return (
     <Header>
-      <Header.Logo>Glore Express</Header.Logo>
+      <Header.Logo>Globe Express</Header.Logo>
       <Header.Wrapper>
         <Header.Nav>
           <Header.Menu>

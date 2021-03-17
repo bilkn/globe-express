@@ -31,7 +31,7 @@ export function ContentContainer() {
       </Hero>
       <CardSlider>
         {cardData.map((data) => (
-          <CardSlider.Card src={data.image} key={data.id}>
+          <CardSlider.Card background={data.image} key={data.id}>
             <CardSlider.Title>{data.title}</CardSlider.Title>
             <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
           </CardSlider.Card>

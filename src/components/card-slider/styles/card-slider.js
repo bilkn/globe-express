@@ -4,13 +4,17 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 250px);
   grid-template-rows: 1fr;
+  padding: 1rem;
   overflow: hidden;
   white-space: nowrap;
 `;
 export const Card = styled.div`
-  border: 1px solid red;
+  background: url(${(props) => props.background}) center no-repeat;
+  background-size: cover;
   border-radius: 20px;
-  display:flex;
+  box-shadow: 15px 15px 50px #000;
+  color: whitesmoke;
+  display: flex;
   flex-direction: column;
   height: 350px;
   justify-content: flex-end;

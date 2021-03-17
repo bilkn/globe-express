@@ -37,8 +37,5 @@ Header.Logo = function HeaderLogo({ ...restProps }) {
 Header.Button = function HeaderButton({ ...restProps }) {
   return <Button {...restProps}></Button>;
 };
-Header.Icon = function HeaderIcon({ ...restProps }) {
-  return <Icon {...restProps}></Icon>;
-};
 
 export default Header;
