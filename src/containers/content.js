@@ -4,7 +4,7 @@ import { CardSlider } from '../components';
 import { Hero } from '../components';
 /* import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark'; */
 
-function ContentContainer() {
+export function ContentContainer() {
   return (
     <Content>
       <Hero>
@@ -15,13 +15,11 @@ function ContentContainer() {
           id necessitatibus perferendis sunt nam.
         </Hero.Text>
         <Hero.Box>
-          <Hero.Button>
-        {/*     <Bookmark size="24" /> */}
-          </Hero.Button>
+          <Hero.Button></Hero.Button>
           <Hero.Button>DISORDER LOCATION</Hero.Button>
         </Hero.Box>
       </Hero>
-      <CardSlider>
+       <CardSlider>
         <CardSlider.Card>
           <CardSlider.Title>Japan Alpha</CardSlider.Title>
           <CardSlider.Subtitle>NAGANO PREFECTURE</CardSlider.Subtitle>
@@ -38,9 +36,7 @@ function ContentContainer() {
           <CardSlider.Title>Tarife - Spain</CardSlider.Title>
           <CardSlider.Subtitle>LOS LANCES BEACH</CardSlider.Subtitle>
         </CardSlider.Card>
-      </CardSlider>
+      </CardSlider> 
     </Content>
   );
 }
-
-export default ContentContainer;

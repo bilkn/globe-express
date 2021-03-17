@@ -2,7 +2,7 @@ import { Header } from '../components';
 /* import { Search } from '@styled-icons/bootstrap/Search';
 import { Download } from '@styled-icons/entypo/Download'; */
 
-function HeaderContainer({ children }) {
+export function HeaderContainer({ children }) {
   return (
     <Header>
       <Header.Logo>Glore Express</Header.Logo>
@@ -31,4 +31,3 @@ function HeaderContainer({ children }) {
   );
 }
 
-export default HeaderContainer;
