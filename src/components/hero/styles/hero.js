@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-basis: 40%;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   padding: 0 4rem;
 `;
 
@@ -20,7 +20,12 @@ export const Text = styled.p`
 `;
 
 export const Box = styled.div`
+  align-items: center;
   display: flex;
 `;
 
-export const Button = styled.button``;
+export const Button = styled.button`
+  border: none;
+  border-radius: 20px;
+  padding: 0.7rem 1.2rem;
+`;

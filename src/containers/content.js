@@ -15,8 +15,15 @@ export function ContentContainer() {
           id necessitatibus perferendis sunt nam.
         </Hero.Text>
         <Hero.Box>
-          <Hero.Button>
-            <Bookmark size="24"/>
+          <Hero.Button
+            style={{
+              background: 'orange',
+              borderRadius: '50%',
+              marginRight: '20px',
+              padding: '0.7rem',
+            }}
+          >
+            <Bookmark size="20" style={{ color: 'white' }} />
           </Hero.Button>
           <Hero.Button>DISORDER LOCATION</Hero.Button>
         </Hero.Box>

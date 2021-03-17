@@ -20,5 +20,6 @@ export const Card = styled.div`
 `;
 export const Title = styled.h2`
   font-size: 1rem;
+  margin-bottom: 1rem;
 `;
 export const Subtitle = styled.h3``;
