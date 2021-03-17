@@ -1,6 +1,6 @@
 import { Header } from '../components';
-import { Search } from '@styled-icons/bootstrap/Search';
-import { Download } from '@styled-icons/entypo/Download';
+/* import { Search } from '@styled-icons/bootstrap/Search';
+import { Download } from '@styled-icons/entypo/Download'; */
 
 function HeaderContainer({ children }) {
   return (
@@ -19,10 +19,10 @@ function HeaderContainer({ children }) {
         </Header.Nav>
         <Header.Box>
           <Header.Button style={{marginRight: "15px"}}>
-            <Search size="24"  />
+         {/*    <Search size="24"  /> */}
           </Header.Button>
           <Header.Button>
-            <Download size="24" />
+      {/*       <Download size="24" /> */}
           </Header.Button>
         </Header.Box>
       </Header.Wrapper>

@@ -31,6 +31,7 @@ export const Box = styled.div`
 export const Button = styled.button`
   background: none;
   border: none;
+  cursor: pointer;
 `;
 export const Wrapper = styled.div`
   display: flex;
