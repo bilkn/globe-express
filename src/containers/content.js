@@ -3,6 +3,7 @@ import { Content } from '../components';
 import { CardSlider } from '../components';
 import { Hero } from '../components';
 import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark';
+import { ChevronLeft, ChevronRight } from '@styled-icons/bootstrap/';
 import cardData from '../fixtures/card-slider.json';
 import 'styled-components/macro';
 
@@ -19,7 +20,7 @@ export function ContentContainer() {
         <Hero.Box>
           <Hero.Button
             css={`
-              background: orange;
+              background: #f7ba53;
               border-radius: 50%;
               margin-right: 20px;
               padding: 0.7rem;
@@ -38,12 +39,36 @@ export function ContentContainer() {
         </Hero.Box>
       </Hero>
       <CardSlider>
-        {cardData.map((data) => (
-          <CardSlider.Card background={data.image} key={data.id}>
-            <CardSlider.Title>{data.title}</CardSlider.Title>
-            <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
-          </CardSlider.Card>
-        ))}
+        <CardSlider.Grid>
+          {cardData.map((data) => (
+            <CardSlider.Card background={data.image} key={data.id}>
+              <CardSlider.Title>{data.title}</CardSlider.Title>
+              <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
+            </CardSlider.Card>
+          ))}
+        </CardSlider.Grid>
+        <CardSlider.Controls>
+          <CardSlider.Box>
+            <CardSlider.Button
+              css={`
+                margin-right: 25px;
+              `}
+            >
+              <ChevronLeft size="24px" />
+            </CardSlider.Button>
+            <CardSlider.Button>
+              <ChevronRight size="24px" />
+            </CardSlider.Button>
+          </CardSlider.Box>
+          <CardSlider.LinearProgress
+            css={`
+              margin-right: 25px;
+            `}
+          >
+            <CardSlider.LinearProgressBar />
+          </CardSlider.LinearProgress>
+          <CardSlider.Counter>01</CardSlider.Counter>
+        </CardSlider.Controls>
       </CardSlider>
     </Content>
   );

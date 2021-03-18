@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 65px;
+  padding-bottom: 170px;
 `;
 
 export const Title = styled.h2``;

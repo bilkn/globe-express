@@ -1,11 +1,13 @@
 import styled from 'styled-components/macro';
 
 export const Container = styled.div`
+  padding: 65px 40px;
+`;
+
+export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 250px);
   grid-template-rows: 1fr;
-  padding: 65px 40px;
-  overflow: hidden;
   white-space: nowrap;
 `;
 export const Card = styled.div`
@@ -28,4 +30,39 @@ export const Title = styled.h2`
 `;
 export const Subtitle = styled.h3`
   text-transform: uppercase;
+`;
+
+export const Controls = styled.div`
+  align-items: center;
+  display: flex;
+  margin-top: 30px;
+`;
+
+export const Box = styled.div`
+  margin-right: 25px;
+`;
+
+export const Button = styled.button`
+  background: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  padding: 20px;
+`;
+
+export const LinearProgress = styled.div`
+  background: gray;
+  flex-shrink: 0;
+  width: 600px;
+`;
+
+export const LinearProgressBar = styled.div`
+  background: #f7ba53;
+  height: 4px;
+  width: 100%;
+`;
+
+export const Counter = styled.p`
+  color: whitesmoke;
+  font-size: 4rem;
 `;
