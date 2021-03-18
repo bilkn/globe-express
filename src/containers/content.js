@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Content } from '../components';
 import { CardSlider } from '../components';
 import { Hero } from '../components';
@@ -8,11 +8,32 @@ import cardData from '../fixtures/card-slider.json';
 import 'styled-components/macro';
 
 export function ContentContainer() {
+  const [cardIndex, setCardIndex] = useState(0);
+  const [marginLeft, setMarginLeft] = useState(0);
+
+  const handleLeftChevronClick = () => {
+    if (marginLeft > 0) {
+      setCardIndex((cardIndex) => cardIndex - 1);
+      setMarginLeft((marginLeft) => marginLeft - 270);
+    }
+  };
+  const handleRightChevronClick = () => {
+    if (cardIndex < cardData.length - 1) {
+      setCardIndex((cardIndex) => cardIndex + 1);
+      setMarginLeft((marginLeft) => marginLeft + 270);
+    }
+  };
+  const calculateProgressBarWidth = () => {
+    const denominator = (cardData.length / (cardIndex+1));
+    console.log(denominator)
+    console.log((1 / denominator) * 100);
+    return (1 / denominator) * 100;
+  };
   return (
     <Content>
       <Hero>
-        <Hero.Title>Switzerland Alps</Hero.Title>
-        <Hero.Subtitle>SAINT ANTÖNIEN</Hero.Subtitle>
+        <Hero.Title>{cardData[cardIndex].title}</Hero.Title>
+        <Hero.Subtitle>{cardData[cardIndex].subtitle}</Hero.Subtitle>
         <Hero.Text>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio fugiat
           id necessitatibus perferendis sunt nam.
@@ -40,8 +61,18 @@ export function ContentContainer() {
       </Hero>
       <CardSlider>
         <CardSlider.Wrapper>
-          {cardData.map((data) => (
-            <CardSlider.Card background={data.image} key={data.id}>
+          {cardData.map((data, i) => (
+            <CardSlider.Card
+              marginLeft={marginLeft}
+              first={i === 0}
+              background={data.image}
+              key={data.id}
+              css={`
+                box-shadow: ${i >= 1 && i === cardIndex
+                  ? 0
+                  : '15px 15px 50px #000'};
+              `}
+            >
               <CardSlider.Title>{data.title}</CardSlider.Title>
               <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
             </CardSlider.Card>
@@ -50,13 +81,14 @@ export function ContentContainer() {
         <CardSlider.Controls>
           <CardSlider.Box>
             <CardSlider.Button
+              onClick={handleLeftChevronClick}
               css={`
                 margin-right: 25px;
               `}
             >
               <ChevronLeft size="24px" />
             </CardSlider.Button>
-            <CardSlider.Button>
+            <CardSlider.Button onClick={handleRightChevronClick}>
               <ChevronRight size="24px" />
             </CardSlider.Button>
           </CardSlider.Box>
@@ -65,9 +97,13 @@ export function ContentContainer() {
               margin-right: 25px;
             `}
           >
-            <CardSlider.LinearProgressBar />
+            <CardSlider.LinearProgressBar
+              css={`
+                width: ${calculateProgressBarWidth()}%;
+              `}
+            />
           </CardSlider.LinearProgress>
-          <CardSlider.Counter>01</CardSlider.Counter>
+          <CardSlider.Counter>0{cardIndex + 1}</CardSlider.Counter>
         </CardSlider.Controls>
       </CardSlider>
     </Content>

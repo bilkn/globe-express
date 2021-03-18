@@ -3,11 +3,12 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   color: white;
   display: flex;
-  flex-basis: 40%;
   flex-direction: column;
+  flex-shrink: 0;
   justify-content: space-between;
   padding: 65px;
   padding-bottom: 170px;
+  width: 40%;
 `;
 
 export const Title = styled.h2``;
