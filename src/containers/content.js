@@ -39,14 +39,14 @@ export function ContentContainer() {
         </Hero.Box>
       </Hero>
       <CardSlider>
-        <CardSlider.Grid>
+        <CardSlider.Wrapper>
           {cardData.map((data) => (
             <CardSlider.Card background={data.image} key={data.id}>
               <CardSlider.Title>{data.title}</CardSlider.Title>
               <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
             </CardSlider.Card>
           ))}
-        </CardSlider.Grid>
+        </CardSlider.Wrapper>
         <CardSlider.Controls>
           <CardSlider.Box>
             <CardSlider.Button

@@ -4,11 +4,8 @@ export const Container = styled.div`
   padding: 65px 40px;
 `;
 
-export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 250px);
-  grid-template-rows: 1fr;
-  white-space: nowrap;
+export const Wrapper = styled.div`
+  display: flex;
 `;
 export const Card = styled.div`
   background: url(${(props) => props.background}) center no-repeat;
@@ -18,11 +15,13 @@ export const Card = styled.div`
   color: whitesmoke;
   display: flex;
   flex-direction: column;
+  flex-shrink:0;
   height: 350px;
   justify-content: flex-end;
   margin-right: 40px;
   padding: 1.5rem;
   white-space: normal;
+  width: 230px;
 `;
 export const Title = styled.h2`
   font-size: 1rem;

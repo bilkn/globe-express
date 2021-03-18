@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Container,
-  Grid,
+  Wrapper,
   Card,
   Title,
   Subtitle,
@@ -17,8 +17,8 @@ function CardSlider({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-CardSlider.Grid = function CardSliderGrid({ children, ...restProps }) {
-  return <Grid {...restProps}>{children}</Grid>;
+CardSlider.Wrapper = function CardSliderWrapper({ children, ...restProps }) {
+  return <Wrapper {...restProps}>{children}</Wrapper>;
 };
 
 CardSlider.Card = function CardSliderCard({ children, ...restProps }) {
