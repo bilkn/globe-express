@@ -1,7 +1,7 @@
 import { Header } from '../components';
 import { Search } from '@styled-icons/bootstrap/Search';
-import { Download } from '@styled-icons/entypo/Download'; 
-
+import { Download } from '@styled-icons/entypo/Download';
+import 'styled-components/macro';
 export function HeaderContainer({ children }) {
   return (
     <Header>
@@ -14,15 +14,25 @@ export function HeaderContainer({ children }) {
             <Header.MenuItem>DESTINATIONS</Header.MenuItem>
             <Header.MenuItem>FLIGHTS</Header.MenuItem>
             <Header.MenuItem>OFFERS</Header.MenuItem>
-            <Header.MenuItem style={{ margin: 0 }}>CONTACT</Header.MenuItem>
+            <Header.MenuItem
+              css={`
+                margin: 0;
+              `}
+            >
+              CONTACT
+            </Header.MenuItem>
           </Header.Menu>
         </Header.Nav>
         <Header.Box>
-          <Header.Button style={{marginRight: "15px"}}>
-           <Search size="24"  /> 
+          <Header.Button
+            css={`
+              margin-right: 15px;
+            `}
+          >
+            <Search size="24" />
           </Header.Button>
           <Header.Button>
-           <Download size="24" /> 
+            <Download size="24" />
           </Header.Button>
         </Header.Box>
       </Header.Wrapper>
@@ -30,4 +40,3 @@ export function HeaderContainer({ children }) {
     </Header>
   );
 }
-
