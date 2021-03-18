@@ -8,32 +8,30 @@ import cardData from '../fixtures/card-slider.json';
 import 'styled-components/macro';
 
 export function ContentContainer() {
-  const [cardIndex, setCardIndex] = useState(0);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [marginLeft, setMarginLeft] = useState(0);
 
   const handleLeftChevronClick = () => {
-    if (marginLeft > 0) {
-      setCardIndex((cardIndex) => cardIndex - 1);
+    if (currentCardIndex > 0) {
+      setCurrentCardIndex((currentCardIndex) => currentCardIndex - 1);
       setMarginLeft((marginLeft) => marginLeft - 270);
     }
   };
   const handleRightChevronClick = () => {
-    if (cardIndex < cardData.length - 1) {
-      setCardIndex((cardIndex) => cardIndex + 1);
+    if (currentCardIndex < cardData.length - 1) {
+      setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
       setMarginLeft((marginLeft) => marginLeft + 270);
     }
   };
   const calculateProgressBarWidth = () => {
-    const denominator = (cardData.length-1) / (cardIndex);
-    console.log(denominator);
-    console.log((1 / denominator) * 100);
+    const denominator = (cardData.length - 1) / currentCardIndex;
     return (1 / denominator) * 100;
   };
   return (
     <Content>
       <Hero>
-        <Hero.Title>{cardData[cardIndex].title}</Hero.Title>
-        <Hero.Subtitle>{cardData[cardIndex].subtitle}</Hero.Subtitle>
+        <Hero.Title>{cardData[currentCardIndex].title}</Hero.Title>
+        <Hero.Subtitle>{cardData[currentCardIndex].subtitle}</Hero.Subtitle>
         <Hero.Text>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio fugiat
           id necessitatibus perferendis sunt nam.
@@ -61,22 +59,25 @@ export function ContentContainer() {
       </Hero>
       <CardSlider>
         <CardSlider.Wrapper>
-          {cardData.map((data, i) => (
-            <CardSlider.Card
-              marginLeft={marginLeft}
-              first={i === 0}
-              background={data.image}
-              key={data.id}
-              css={`
-                box-shadow: ${i >= 1 && i === cardIndex
-                  ? 0
-                  : '15px 15px 50px #000'};
-              `}
-            >
-              <CardSlider.Title>{data.title}</CardSlider.Title>
-              <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
-            </CardSlider.Card>
-          ))}
+          {cardData.map((data, i) => {
+            console.log('inner index', i, 'currentCardIndex', currentCardIndex);
+            return (
+              <CardSlider.Card
+                marginLeft={marginLeft}
+                first={i === 0}
+                background={data.image}
+                key={data.id}
+                css={`
+                  box-shadow: ${currentCardIndex >= 1 && i+1 === currentCardIndex
+                    ? "none"
+                    : '15px 15px 50px #000'};
+                `}
+              >
+                <CardSlider.Title>{data.title}</CardSlider.Title>
+                <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
+              </CardSlider.Card>
+            );
+          })}
         </CardSlider.Wrapper>
         <CardSlider.Controls>
           <CardSlider.Box>
@@ -99,11 +100,11 @@ export function ContentContainer() {
           >
             <CardSlider.LinearProgressBar
               css={`
-                width: ${cardIndex === 0 ? 0 : calculateProgressBarWidth()}%;
+                width: ${currentCardIndex === 0 ? 0 : calculateProgressBarWidth()}%;
               `}
             />
           </CardSlider.LinearProgress>
-          <CardSlider.Counter>0{cardIndex + 1}</CardSlider.Counter>
+          <CardSlider.Counter>0{currentCardIndex + 1}</CardSlider.Counter>
         </CardSlider.Controls>
       </CardSlider>
     </Content>
