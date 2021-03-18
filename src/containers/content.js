@@ -24,8 +24,8 @@ export function ContentContainer() {
     }
   };
   const calculateProgressBarWidth = () => {
-    const denominator = (cardData.length / (cardIndex+1));
-    console.log(denominator)
+    const denominator = (cardData.length-1) / (cardIndex);
+    console.log(denominator);
     console.log((1 / denominator) * 100);
     return (1 / denominator) * 100;
   };
@@ -99,7 +99,7 @@ export function ContentContainer() {
           >
             <CardSlider.LinearProgressBar
               css={`
-                width: ${calculateProgressBarWidth()}%;
+                width: ${cardIndex === 0 ? 0 : calculateProgressBarWidth()}%;
               `}
             />
           </CardSlider.LinearProgress>
