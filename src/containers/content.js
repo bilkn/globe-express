@@ -4,6 +4,7 @@ import { CardSlider } from '../components';
 import { Hero } from '../components';
 import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark';
 import cardData from '../fixtures/card-slider.json';
+import 'styled-components/macro';
 
 export function ContentContainer() {
   return (
@@ -17,16 +18,23 @@ export function ContentContainer() {
         </Hero.Text>
         <Hero.Box>
           <Hero.Button
-            style={{
-              background: 'orange',
-              borderRadius: '50%',
-              marginRight: '20px',
-              padding: '0.7rem',
-            }}
+            css={`
+              background: orange;
+              border-radius: 50%;
+              margin-right: 20px;
+              padding: 0.7rem;
+            `}
           >
-            <Bookmark size="20" style={{ color: 'white' }} />
+            <Bookmark size="20" />
           </Hero.Button>
-          <Hero.Button>DISORDER LOCATION</Hero.Button>
+          <Hero.Button
+            css={`
+              background: none;
+              border: 1px solid white;
+            `}
+          >
+            DISCOVER LOCATION
+          </Hero.Button>
         </Hero.Box>
       </Hero>
       <CardSlider>
