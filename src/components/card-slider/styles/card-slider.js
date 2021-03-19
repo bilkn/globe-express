@@ -3,11 +3,13 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   flex-shrink: 0;
   min-width: 60%;
+  overflow: hidden;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   padding: 65px 40px;
+  transition: transform 300ms;
   overflow: hidden;
 `;
 export const Card = styled.div`
@@ -22,9 +24,7 @@ export const Card = styled.div`
   height: 350px;
   justify-content: flex-end;
   margin-right: 40px;
-  margin-left: -${(props) => (props.first ? props.marginLeft : 0)}px;
   padding: 1.5rem;
-  transition: margin-left 300ms ease;
   white-space: normal;
   width: 230px;
 `;

@@ -7,20 +7,24 @@ import { ChevronLeft, ChevronRight } from '@styled-icons/bootstrap/';
 import cardData from '../fixtures/card-slider.json';
 import 'styled-components/macro';
 
-export function ContentContainer() {
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [marginLeft, setMarginLeft] = useState(0);
+export function ContentContainer(props) {
+  const {
+    currentCardIndex,
+    setCurrentCardIndex,
+    translateXValue,
+    setTranslateXValue,
+  } = props;
 
   const handleLeftChevronClick = () => {
     if (currentCardIndex > 0) {
       setCurrentCardIndex((currentCardIndex) => currentCardIndex - 1);
-      setMarginLeft((marginLeft) => marginLeft - 270);
+      setTranslateXValue((translateXValue) => (translateXValue += 270));
     }
   };
   const handleRightChevronClick = () => {
     if (currentCardIndex < cardData.length - 1) {
       setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
-      setMarginLeft((marginLeft) => marginLeft + 270);
+      setTranslateXValue((translateXValue) => (translateXValue -= 270));
     }
   };
   const calculateProgressBarWidth = () => {
@@ -58,10 +62,13 @@ export function ContentContainer() {
         </Hero.Box>
       </Hero>
       <CardSlider>
-        <CardSlider.Wrapper>
+        <CardSlider.Wrapper
+          css={`
+            transform: translateX(${translateXValue}px);
+          `}
+        >
           {cardData.map((data, i) => (
             <CardSlider.Card
-              marginLeft={marginLeft}
               first={i === 0}
               background={data.image}
               key={data.id}
