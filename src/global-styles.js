@@ -16,13 +16,15 @@ html, body {
         overflow: hidden;
     }
     #root {
-        background: url("/assets/img-2.jpg") center  no-repeat;
-        background-size: cover;
         height: 100%;
+        position: relative;
     }
 
     li {
         list-style: none;
+    }
+    button {
+        cursor: pointer;
     }
 
 `;

@@ -9,6 +9,8 @@ export const Container = styled.header`
   padding: 0.5rem 1.5rem;
 `;
 export const Logo = styled.h1`
+  align-items:center;
+  display: flex;
   font-size: 1.5rem;
 `;
 export const Nav = styled.nav`
@@ -39,6 +41,10 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   color: whitesmoke;
+  transition: color 150ms;
+  &:hover {
+    color: #f5f5f5ab;
+  }
 `;
 export const Wrapper = styled.div`
   align-items: center;

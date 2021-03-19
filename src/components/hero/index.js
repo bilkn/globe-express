@@ -1,11 +1,22 @@
 import React from 'react';
-import { Container, Title, Subtitle, Text, Box, Button } from './styles/hero';
+import {
+  Container,
+  Wrapper,
+  Title,
+  Subtitle,
+  Text,
+  Box,
+  Button,
+} from './styles/hero';
 
 function Hero({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 Hero.Title = function HeroTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
+};
+Hero.Wrapper = function HeroWrapper({ children, ...restProps }) {
+  return <Wrapper {...restProps}>{children}</Wrapper>;
 };
 Hero.Subtitle = function HeroSubtitle({ children, ...restProps }) {
   return <Subtitle {...restProps}>{children}</Subtitle>;

@@ -1,13 +1,17 @@
 import styled from 'styled-components/macro';
 
+
+
 export const Container = styled.div`
   flex-shrink: 0;
   min-width: 60%;
+  overflow: hidden;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   padding: 65px 40px;
+  transition: transform 300ms 10ms;
   overflow: hidden;
 `;
 export const Card = styled.div`
@@ -22,9 +26,8 @@ export const Card = styled.div`
   height: 350px;
   justify-content: flex-end;
   margin-right: 40px;
-  margin-left: -${(props)=>props.first ? props.marginLeft : 0}px;
   padding: 1.5rem;
-  transition: margin-left 200ms ease;
+  transition: box-shadow 200ms 15ms;
   white-space: normal;
   width: 230px;
 `;
@@ -39,7 +42,7 @@ export const Subtitle = styled.h3`
 export const Controls = styled.div`
   align-items: center;
   display: flex;
-  padding-left: 40px;
+  padding: 0 40px;
 `;
 
 export const Box = styled.div`
@@ -52,18 +55,23 @@ export const Button = styled.button`
   border-radius: 50%;
   color: white;
   padding: 20px;
+  transition: background 200ms ease;
+  outline: none;
+  &:hover {
+    background: #dcdcdc5e;
+  }
 `;
 
 export const LinearProgress = styled.div`
-  background: gray;
+  background: #ffffffa8;
   flex-shrink: 0;
-  width: 500px;
+  width: 45%;
 `;
 
 export const LinearProgressBar = styled.div`
   background: #f7ba53;
-  height: 4px;
-  transition: width 200ms ease;
+  height: 2px;
+  transition: width 200ms ease 20ms;
 `;
 
 export const Counter = styled.p`
