@@ -6,7 +6,7 @@ export const Container = styled.header`
   display: flex;
   height: 60px;
   justify-content: space-between;
-  padding: 0.5rem 1.5rem;
+  padding: 2.5em 1.5em;
 `;
 export const Logo = styled.h1`
   align-items:center;
@@ -26,6 +26,7 @@ export const MenuItem = styled.li`
   cursor: pointer;
   margin-bottom: -2px;
   margin-right: 30px;
+  padding: 5px 0;
   transition: border-bottom-color 200ms ease;
 
   &:hover {

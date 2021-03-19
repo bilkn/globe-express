@@ -1,16 +1,14 @@
 import { keyframes } from 'styled-components';
 
-export const progressin = keyframes`
+export const progress = keyframes`
     from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-`;
+    transform: translateX(-100%);
+  }
 
-export const progressout = keyframes`
-    to {
-        transform: translateX(100%);
-    }
+  90% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 `;

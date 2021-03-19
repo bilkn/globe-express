@@ -1,8 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Main } from '../components';
 import { ContentContainer } from './content';
 import { CardSlider } from '../components';
-import { progressin, progressout } from '../animations';
+import { progress } from '../animations';
 import 'styled-components/macro';
 
 export function MainContainer(props) {
@@ -32,7 +32,7 @@ export function MainContainer(props) {
           onAnimationIteration={handleProgressAnimation}
           onAnimationEnd={handleProgressAnimation}
           css={`
-            animation: ${progressin} 5s linear 3 50ms;
+            animation: ${progress} 5s linear 3 50ms forwards;
             width: 100%;
           `}
         />

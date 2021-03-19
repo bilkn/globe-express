@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "image": "/assets/img-1.jpg",
-    "title": "Saharan Desert",
-    "subtitle": "Marrakech Merzouga"
-  },
-  {
-    "id": 2,
     "image": "/assets/img-2.jpg",
-    "title": "Japan Alpha",
+    "title": "Japan Alphs",
     "subtitle": "Nagano Prefecture"
   },
   {
+    "id": 2,
+    "image": "/assets/img-1.jpg",
+    "title": "Saharan Desert - Morocco",
+    "subtitle": "Marrakech Merzouga"
+  },
+  {
     "id": 3,
-    "image": "/assets/img-3.jpg",
-    "title": "Tarife - Spain",
-    "subtitle": "Los Lances Beach"
+    "image": "/assets/img-4.jpg",
+    "title": "Sierra Nevada - United States",
+    "subtitle": "Yosemite National Park"
   },
   {
     "id": 4,
-    "image": "/assets/img-4.jpg",
-    "title": "Sierra Nevada",
-    "subtitle": "Yosemite National Park"
+    "image": "/assets/img-3.jpg",
+    "title": "Tarife - Spain",
+    "subtitle": "Los Lances Beach"
   }
 ]
