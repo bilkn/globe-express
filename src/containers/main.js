@@ -5,10 +5,13 @@ import { CardSlider } from '../components';
 import { progress } from '../animations';
 import 'styled-components/macro';
 
-export function MainContainer() {
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [translateXValue, setTranslateXValue] = useState(0);
-
+export function MainContainer(props) {
+  const {
+    currentCardIndex,
+    setCurrentCardIndex,
+    translateXValue,
+    setTranslateXValue,
+  } = props;
 
   const handleAnimationIteration = () => {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
