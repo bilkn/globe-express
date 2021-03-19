@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Main } from '../components';
 import { ContentContainer } from './content';
 import { CardSlider } from '../components';
-import { progress } from '../animations';
+import { progressin, progressout } from '../animations';
 import 'styled-components/macro';
 
 export function MainContainer(props) {
@@ -31,7 +31,7 @@ export function MainContainer(props) {
         <CardSlider.LinearProgressBar
           onAnimationIteration={handleAnimationIteration}
           css={`
-            animation: ${progress} 5s linear 4;
+            animation: ${progressin} 5s linear 4 50ms;
             width: 100%;
           `}
         />

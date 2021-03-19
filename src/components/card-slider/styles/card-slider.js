@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   padding: 65px 40px;
-  transition: transform 300ms;
+  transition: transform 300ms 10ms;
   overflow: hidden;
 `;
 export const Card = styled.div`
@@ -27,6 +27,7 @@ export const Card = styled.div`
   justify-content: flex-end;
   margin-right: 40px;
   padding: 1.5rem;
+  transition: box-shadow 200ms 15ms;
   white-space: normal;
   width: 230px;
 `;
@@ -70,7 +71,7 @@ export const LinearProgress = styled.div`
 export const LinearProgressBar = styled.div`
   background: #f7ba53;
   height: 2px;
-  transition: width 200ms ease;
+  transition: width 200ms ease 20ms;
 `;
 
 export const Counter = styled.p`

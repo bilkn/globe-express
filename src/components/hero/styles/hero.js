@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-shrink: 0;
   justify-content: space-between;
   padding: 65px;
-  padding-bottom: 140px;
   width: 40%;
 `;
 
@@ -18,6 +17,7 @@ export const Subtitle = styled.h3`
 `;
 
 export const Text = styled.p`
+  line-height: 1.6rem;
   margin-bottom: 1rem;
   white-space: unset;
 `;
