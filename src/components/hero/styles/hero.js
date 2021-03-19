@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-shrink: 0;
   justify-content: space-between;
   padding: 65px;
-  padding-bottom: 170px;
+  padding-bottom: 140px;
   width: 40%;
 `;
 
@@ -32,4 +32,8 @@ export const Button = styled.button`
   border-radius: 20px;
   color: inherit;
   padding: 0.7rem 1.2rem;
+  transition: background 200ms;
+  &:hover {
+    background: ${(props) => props.hoverBg};
+  }
 `;

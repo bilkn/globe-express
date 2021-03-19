@@ -33,7 +33,7 @@ export function HeaderContainer({ children }) {
           </Header.Menu>
         </Header.Nav>
         <Header.Box>
-          <Header.Button
+          <Header.Button 
             css={`
               margin-right: 15px;
             `}

@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro';
 
+
+
 export const Container = styled.div`
   flex-shrink: 0;
   min-width: 60%;
@@ -62,7 +64,7 @@ export const Button = styled.button`
 export const LinearProgress = styled.div`
   background: #ffffffa8;
   flex-shrink: 0;
-  width: 500px;
+  width: 45%;
 `;
 
 export const LinearProgressBar = styled.div`

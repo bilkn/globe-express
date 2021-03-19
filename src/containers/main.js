@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Main } from '../components';
 import { ContentContainer } from './content';
 import { CardSlider } from '../components';
@@ -8,6 +8,8 @@ import 'styled-components/macro';
 export function MainContainer() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [translateXValue, setTranslateXValue] = useState(0);
+
+
   const handleAnimationIteration = () => {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
     setTranslateXValue((translateXValue) => translateXValue - 270);

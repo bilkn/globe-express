@@ -41,6 +41,10 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   color: whitesmoke;
+  transition: color 150ms;
+  &:hover {
+    color: #f5f5f5ab;
+  }
 `;
 export const Wrapper = styled.div`
   align-items: center;

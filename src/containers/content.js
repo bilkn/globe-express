@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Content } from '../components';
 import { CardSlider } from '../components';
 import { Hero } from '../components';
@@ -12,8 +12,14 @@ export function ContentContainer(props) {
     currentCardIndex,
     setCurrentCardIndex,
     translateXValue,
-    setTranslateXValue,
+    setTranslateXValue
   } = props;
+  
+
+
+
+
+
 
   const handleLeftChevronClick = () => {
     if (currentCardIndex > 0) {
@@ -42,6 +48,7 @@ export function ContentContainer(props) {
         </Hero.Text>
         <Hero.Box>
           <Hero.Button
+            hoverBg="#f7ba53d6"
             css={`
               background: #f7ba53;
               border-radius: 50%;
@@ -52,6 +59,7 @@ export function ContentContainer(props) {
             <Bookmark size="20" />
           </Hero.Button>
           <Hero.Button
+            hoverBg="#dcdcdc5e"
             css={`
               background: none;
               border: 1px solid white;
