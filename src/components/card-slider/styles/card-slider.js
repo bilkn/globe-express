@@ -60,14 +60,14 @@ export const Button = styled.button`
 `;
 
 export const LinearProgress = styled.div`
-  background: gray;
+  background: #ffffffa8;
   flex-shrink: 0;
   width: 500px;
 `;
 
 export const LinearProgressBar = styled.div`
   background: #f7ba53;
-  height: 4px;
+  height: 2px;
   transition: width 200ms ease;
 `;
 

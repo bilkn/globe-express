@@ -9,6 +9,8 @@ export const Container = styled.header`
   padding: 0.5rem 1.5rem;
 `;
 export const Logo = styled.h1`
+  align-items:center;
+  display: flex;
   font-size: 1.5rem;
 `;
 export const Nav = styled.nav`
