@@ -24,5 +24,8 @@ html, body {
     li {
         list-style: none;
     }
+    button {
+        cursor: pointer;
+    }
 
 `;

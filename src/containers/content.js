@@ -59,25 +59,23 @@ export function ContentContainer() {
       </Hero>
       <CardSlider>
         <CardSlider.Wrapper>
-          {cardData.map((data, i) => {
-            console.log('inner index', i, 'currentCardIndex', currentCardIndex);
-            return (
-              <CardSlider.Card
-                marginLeft={marginLeft}
-                first={i === 0}
-                background={data.image}
-                key={data.id}
-                css={`
-                  box-shadow: ${currentCardIndex >= 1 && i+1 === currentCardIndex
-                    ? "none"
-                    : '15px 15px 50px #000'};
-                `}
-              >
-                <CardSlider.Title>{data.title}</CardSlider.Title>
-                <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
-              </CardSlider.Card>
-            );
-          })}
+          {cardData.map((data, i) => (
+            <CardSlider.Card
+              marginLeft={marginLeft}
+              first={i === 0}
+              background={data.image}
+              key={data.id}
+              css={`
+                box-shadow: ${currentCardIndex >= 1 &&
+                i + 1 === currentCardIndex
+                  ? 'none'
+                  : '15px 15px 50px #000'};
+              `}
+            >
+              <CardSlider.Title>{data.title}</CardSlider.Title>
+              <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
+            </CardSlider.Card>
+          ))}
         </CardSlider.Wrapper>
         <CardSlider.Controls>
           <CardSlider.Box>
@@ -100,7 +98,9 @@ export function ContentContainer() {
           >
             <CardSlider.LinearProgressBar
               css={`
-                width: ${currentCardIndex === 0 ? 0 : calculateProgressBarWidth()}%;
+                width: ${currentCardIndex === 0
+                  ? 0
+                  : calculateProgressBarWidth()}%;
               `}
             />
           </CardSlider.LinearProgress>

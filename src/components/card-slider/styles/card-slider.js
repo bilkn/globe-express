@@ -22,9 +22,9 @@ export const Card = styled.div`
   height: 350px;
   justify-content: flex-end;
   margin-right: 40px;
-  margin-left: -${(props)=>props.first ? props.marginLeft : 0}px;
+  margin-left: -${(props) => (props.first ? props.marginLeft : 0)}px;
   padding: 1.5rem;
-  transition: margin-left 200ms ease;
+  transition: margin-left 300ms ease;
   white-space: normal;
   width: 230px;
 `;
@@ -52,6 +52,11 @@ export const Button = styled.button`
   border-radius: 50%;
   color: white;
   padding: 20px;
+  transition: background 200ms ease;
+  outline: none;
+  &:hover {
+    background: #dcdcdc5e;
+  }
 `;
 
 export const LinearProgress = styled.div`
