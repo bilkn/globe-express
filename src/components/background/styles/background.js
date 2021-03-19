@@ -5,5 +5,5 @@ export const Container = styled.div`
   background-size: cover;
   background-blend-mode: darken;
   height: 100%;
-  transition: background 400ms 100ms; 
+  transition: background 400ms 100ms;
 `;

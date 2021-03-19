@@ -1,7 +1,11 @@
-import styled from "styled-components/macro"
+import styled from 'styled-components/macro';
 
 export const Container = styled.div`
-    display:flex;
-    padding-bottom: 7rem;
-    width: 100%;
-`
+  padding: 0 65px;
+  padding-bottom: 7rem;
+  width: 100%;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+`;

@@ -2,23 +2,28 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div`
   color: white;
-  display: flex;
-  flex-direction: column;
   flex-shrink: 0;
-  justify-content: space-between;
-  padding: 65px;
   width: 40%;
 `;
 
-export const Title = styled.h2``;
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+`;
+
+export const Title = styled.h2`
+  line-height: 2em;
+`;
 
 export const Subtitle = styled.h3`
   font-size: 4rem;
+  text-transform: uppercase;
 `;
 
 export const Text = styled.p`
   line-height: 1.6rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   white-space: unset;
 `;
 

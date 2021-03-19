@@ -13,7 +13,7 @@ export function MainContainer(props) {
     setTranslateXValue,
   } = props;
 
-  const handleAnimationIteration = () => {
+  const handleProgressAnimation = () => {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
     setTranslateXValue((translateXValue) => translateXValue - 270);
   };
@@ -29,9 +29,10 @@ export function MainContainer(props) {
         `}
       >
         <CardSlider.LinearProgressBar
-          onAnimationIteration={handleAnimationIteration}
+          onAnimationIteration={handleProgressAnimation}
+          onAnimationEnd={handleProgressAnimation}
           css={`
-            animation: ${progressin} 5s linear 4 50ms;
+            animation: ${progressin} 5s linear 3 50ms;
             width: 100%;
           `}
         />

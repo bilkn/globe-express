@@ -39,89 +39,93 @@ export function ContentContainer(props) {
   };
   return (
     <Content>
-      <Hero>
-        <Hero.Title>{cardData[currentCardIndex].title}</Hero.Title>
-        <Hero.Subtitle>{cardData[currentCardIndex].subtitle}</Hero.Subtitle>
-        <Hero.Text>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio fugiat
-          id necessitatibus perferendis sunt nam.
-        </Hero.Text>
-        <Hero.Box>
-          <Hero.Button
-            hoverBg="#f7ba53d6"
+      <Content.Wrapper>
+        <Hero>
+          <Hero.Wrapper>
+            <Hero.Title>{cardData[currentCardIndex].title}</Hero.Title>
+            <Hero.Subtitle>{cardData[currentCardIndex].subtitle}</Hero.Subtitle>
+            <Hero.Text>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
+              fugiat id necessitatibus perferendis sunt nam.
+            </Hero.Text>
+            <Hero.Box>
+              <Hero.Button
+                hoverBg="#f7ba53d6"
+                css={`
+                  background: #f7ba53;
+                  border-radius: 50%;
+                  margin-right: 20px;
+                  padding: 0.7rem;
+                `}
+              >
+                <Bookmark size="20" />
+              </Hero.Button>
+              <Hero.Button
+                hoverBg="#dcdcdc5e"
+                css={`
+                  background: none;
+                  border: 1px solid white;
+                `}
+              >
+                DISCOVER LOCATION
+              </Hero.Button>
+            </Hero.Box>
+          </Hero.Wrapper>
+        </Hero>
+        <CardSlider>
+          <CardSlider.Wrapper
             css={`
-              background: #f7ba53;
-              border-radius: 50%;
-              margin-right: 20px;
-              padding: 0.7rem;
+              transform: translateX(${translateXValue}px);
             `}
           >
-            <Bookmark size="20" />
-          </Hero.Button>
-          <Hero.Button
-            hoverBg="#dcdcdc5e"
-            css={`
-              background: none;
-              border: 1px solid white;
-            `}
-          >
-            DISCOVER LOCATION
-          </Hero.Button>
-        </Hero.Box>
-      </Hero>
-      <CardSlider>
-        <CardSlider.Wrapper
-          css={`
-            transform: translateX(${translateXValue}px);
-          `}
-        >
-          {cardData.map((data, i) => (
-            <CardSlider.Card
-              first={i === 0}
-              background={data.image}
-              key={data.id}
-              css={`
-                box-shadow: ${currentCardIndex >= 1 &&
-                i + 1 === currentCardIndex
-                  ? 'none'
-                  : '15px 15px 50px #000'};
-              `}
-            >
-              <CardSlider.Title>{data.title}</CardSlider.Title>
-              <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
-            </CardSlider.Card>
-          ))}
-        </CardSlider.Wrapper>
-        <CardSlider.Controls>
-          <CardSlider.Box>
-            <CardSlider.Button
-              onClick={handleLeftChevronClick}
+            {cardData.map((data, i) => (
+              <CardSlider.Card
+                first={i === 0}
+                background={data.image}
+                key={data.id}
+                css={`
+                  box-shadow: ${currentCardIndex >= 1 &&
+                  i + 1 === currentCardIndex
+                    ? 'none'
+                    : '15px 15px 50px #000'};
+                `}
+              >
+                <CardSlider.Title>{data.title}</CardSlider.Title>
+                <CardSlider.Subtitle>{data.subtitle}</CardSlider.Subtitle>
+              </CardSlider.Card>
+            ))}
+          </CardSlider.Wrapper>
+          <CardSlider.Controls>
+            <CardSlider.Box>
+              <CardSlider.Button
+                onClick={handleLeftChevronClick}
+                css={`
+                  margin-right: 25px;
+                `}
+              >
+                <ChevronLeft size="24px" />
+              </CardSlider.Button>
+              <CardSlider.Button onClick={handleRightChevronClick}>
+                <ChevronRight size="24px" />
+              </CardSlider.Button>
+            </CardSlider.Box>
+            <CardSlider.LinearProgress
               css={`
                 margin-right: 25px;
               `}
             >
-              <ChevronLeft size="24px" />
-            </CardSlider.Button>
-            <CardSlider.Button onClick={handleRightChevronClick}>
-              <ChevronRight size="24px" />
-            </CardSlider.Button>
-          </CardSlider.Box>
-          <CardSlider.LinearProgress
-            css={`
-              margin-right: 25px;
-            `}
-          >
-            <CardSlider.LinearProgressBar
-              css={`
-                width: ${currentCardIndex === 0
-                  ? 0
-                  : calculateProgressBarWidth()}%;
-              `}
-            />
-          </CardSlider.LinearProgress>
-          <CardSlider.Counter>0{currentCardIndex + 1}</CardSlider.Counter>
-        </CardSlider.Controls>
-      </CardSlider>
+              <CardSlider.LinearProgressBar
+                css={`
+                  width: ${currentCardIndex === 0
+                    ? 0
+                    : calculateProgressBarWidth()}%;
+                `}
+              />
+            </CardSlider.LinearProgress>
+            <CardSlider.Counter>0{currentCardIndex + 1}</CardSlider.Counter>
+          </CardSlider.Controls>
+        </CardSlider>
+      </Content.Wrapper>
     </Content>
   );
 }

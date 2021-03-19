@@ -42,7 +42,7 @@ export const Subtitle = styled.h3`
 export const Controls = styled.div`
   align-items: center;
   display: flex;
-  padding-left: 40px;
+  padding: 0 40px;
 `;
 
 export const Box = styled.div`
