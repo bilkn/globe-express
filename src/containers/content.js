@@ -41,8 +41,8 @@ export function ContentContainer(props) {
     <Content>
       <Content.Wrapper>
         <Hero>
-          <Hero.Wrapper>
             <Hero.Title>{cardData[currentCardIndex].title}</Hero.Title>
+          <Hero.Wrapper>
             <Hero.Subtitle>{cardData[currentCardIndex].subtitle}</Hero.Subtitle>
             <Hero.Text>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
