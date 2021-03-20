@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Main } from '../components';
 import { ContentContainer } from './content';
 import { CardSlider } from '../components';
@@ -13,10 +13,13 @@ export function MainContainer(props) {
     setTranslateXValue,
   } = props;
 
+  const [isProgressAnimationPlay, setIsProgressAnimationPlay] = useState(true);
+  
   const handleProgressAnimation = () => {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
     setTranslateXValue((translateXValue) => translateXValue - 270);
   };
+
 
   return (
     <Main>
@@ -33,10 +36,8 @@ export function MainContainer(props) {
           onAnimationIteration={handleProgressAnimation}
           onAnimationEnd={handleProgressAnimation}
           css={`
-            animation: ${currentCardIndex < cardData.length - 1
-                ? progress
-                : 'none'}
-              5s linear ${cardData.length - 1} 50ms forwards;
+            animation: ${currentCardIndex < cardData.length - 1 && isProgressAnimationPlay ? progress : 'none'} 5s linear
+              ${cardData.length - 1} 50ms forwards;
             width: 100%;
           `}
         />
@@ -46,6 +47,8 @@ export function MainContainer(props) {
         setCurrentCardIndex={setCurrentCardIndex}
         translateXValue={translateXValue}
         setTranslateXValue={setTranslateXValue}
+        isProgressAnimationPlay = {isProgressAnimationPlay}
+        setIsProgressAnimationPlay = {setIsProgressAnimationPlay}
       />
     </Main>
   );

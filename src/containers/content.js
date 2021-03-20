@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Content } from '../components';
 import { CardSlider } from '../components';
 import { Hero } from '../components';
@@ -13,16 +13,20 @@ export function ContentContainer(props) {
     setCurrentCardIndex,
     translateXValue,
     setTranslateXValue,
+    isProgressAnimationPlay,
+    setIsProgressAnimationPlay,
   } = props;
 
   const handleLeftChevronClick = () => {
     if (currentCardIndex > 0) {
+      setIsProgressAnimationPlay(false);
       setCurrentCardIndex((currentCardIndex) => currentCardIndex - 1);
       setTranslateXValue((translateXValue) => (translateXValue += 270));
     }
   };
   const handleRightChevronClick = () => {
     if (currentCardIndex < cardData.length - 1) {
+      setIsProgressAnimationPlay(false);
       setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
       setTranslateXValue((translateXValue) => (translateXValue -= 270));
     }
@@ -31,6 +35,19 @@ export function ContentContainer(props) {
     const denominator = (cardData.length - 1) / currentCardIndex;
     return (1 / denominator) * 100;
   };
+
+  useEffect(() => {
+    let timeout = null;
+    clearTimeout(timeout);
+    if (!isProgressAnimationPlay) {
+      timeout = setTimeout(() => {
+        setIsProgressAnimationPlay(true);
+        clearTimeout(timeout);
+      }, [5000]);
+    }
+    return () => clearTimeout(timeout);
+  }, [currentCardIndex, isProgressAnimationPlay, setIsProgressAnimationPlay]);
+
   return (
     <Content>
       <Content.Wrapper>
@@ -100,9 +117,7 @@ export function ContentContainer(props) {
               >
                 <ChevronLeft size="24px" />
               </CardSlider.Button>
-              <CardSlider.Button
-                onClick={handleRightChevronClick}
-              >
+              <CardSlider.Button onClick={handleRightChevronClick}>
                 <ChevronRight size="24px" />
               </CardSlider.Button>
             </CardSlider.Box>
