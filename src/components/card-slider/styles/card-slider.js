@@ -35,6 +35,7 @@ export const Title = styled.h2`
 `;
 export const Subtitle = styled.h3`
   text-transform: uppercase;
+  width: 85%;
 `;
 
 export const Controls = styled.div`

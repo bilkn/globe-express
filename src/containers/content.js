@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Content } from '../components';
 import { CardSlider } from '../components';
 import { Hero } from '../components';
@@ -12,14 +12,8 @@ export function ContentContainer(props) {
     currentCardIndex,
     setCurrentCardIndex,
     translateXValue,
-    setTranslateXValue
+    setTranslateXValue,
   } = props;
-  
-
-
-
-
-
 
   const handleLeftChevronClick = () => {
     if (currentCardIndex > 0) {
@@ -41,12 +35,13 @@ export function ContentContainer(props) {
     <Content>
       <Content.Wrapper>
         <Hero>
-            <Hero.Title>{cardData[currentCardIndex].title}</Hero.Title>
+          <Hero.Title>{cardData[currentCardIndex].title}</Hero.Title>
           <Hero.Wrapper>
             <Hero.Subtitle>{cardData[currentCardIndex].subtitle}</Hero.Subtitle>
             <Hero.Text>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
-              fugiat id necessitatibus perferendis sunt nam.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus soluta vel, doloremque qui, ipsum blanditiis libero
+              eius corporis rem eveniet excepturi necessitatibus iste.
             </Hero.Text>
             <Hero.Box>
               <Hero.Button
@@ -105,7 +100,9 @@ export function ContentContainer(props) {
               >
                 <ChevronLeft size="24px" />
               </CardSlider.Button>
-              <CardSlider.Button onClick={handleRightChevronClick}>
+              <CardSlider.Button
+                onClick={handleRightChevronClick}
+              >
                 <ChevronRight size="24px" />
               </CardSlider.Button>
             </CardSlider.Box>
