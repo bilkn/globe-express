@@ -4,7 +4,7 @@ import { ContentContainer } from './content';
 import { CardSlider } from '../components';
 import { progress } from '../animations';
 import 'styled-components/macro';
-import cardData from "../fixtures/card-slider.json";
+import cardData from '../fixtures/card-slider.json';
 export function MainContainer(props) {
   const {
     currentCardIndex,
@@ -22,6 +22,7 @@ export function MainContainer(props) {
     <Main>
       <CardSlider.LinearProgress
         css={`
+          max-width: initial;
           position: fixed;
           top: 0;
           left: 0;
@@ -32,7 +33,10 @@ export function MainContainer(props) {
           onAnimationIteration={handleProgressAnimation}
           onAnimationEnd={handleProgressAnimation}
           css={`
-            animation: ${progress} 5s linear ${cardData.length-1} 50ms forwards;
+            animation: ${currentCardIndex < cardData.length - 1
+                ? progress
+                : 'none'}
+              5s linear ${cardData.length - 1} 50ms forwards;
             width: 100%;
           `}
         />

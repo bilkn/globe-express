@@ -63,7 +63,8 @@ export const Button = styled.button`
 export const LinearProgress = styled.div`
   background: #ffffffa8;
   flex-shrink: 0;
-  width: 500px;
+  max-width: 500px;
+  width: 30vw;
 `;
 
 export const LinearProgressBar = styled.div`
