@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   overflow: hidden;
 `;
 export const Card = styled.div`
-  background: url(${(props) => props.background}) center no-repeat;
+  background: url(${(props) => props.background}) left center no-repeat;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 15px 15px 50px #000;

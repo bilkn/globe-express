@@ -78,7 +78,7 @@ export function ContentContainer(props) {
               transform: translateX(${translateXValue}px);
             `}
           >
-            {cardData.map((data, i) => (
+            {cardData.slice(1).map((data, i) => (
               <CardSlider.Card
                 first={i === 0}
                 background={data.image}
