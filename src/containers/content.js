@@ -93,7 +93,7 @@ export function ContentContainer(props) {
             {cardData.slice(1).map((data, i) => (
               <CardSlider.Card
                 first={i === 0}
-                background={data.image}
+                background={data.background}
                 key={data.id}
                 css={`
                   box-shadow: ${currentCardIndex >= 1 &&

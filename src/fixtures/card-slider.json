@@ -8,30 +8,35 @@
   {
     "id": 1,
     "image": "/assets/japan-alps-2000w.webp",
+    "background": "/assets/japan-alps.webp",
     "title": "Japan Alphs",
     "subtitle": "Nagano Prefecture"
   },
   {
     "id": 3,
     "image": "/assets/morocco-2000w.webp",
+    "background":"/assets/morocco.webp",
     "title": "Saharan Desert - Morocco",
     "subtitle": "Marrakech Merzouga"
   },
   {
     "id": 4,
     "image": "/assets/yosemite-2000w.webp",
+    "background":"/assets/yosemite.webp",
     "title": "Sierra Nevada - United States",
     "subtitle": "Yosemite National Park"
   },
   {
     "id": 5,
     "image": "/assets/los-lances-2000w.webp",
+    "background": "/assets/los-lances.webp",
     "title": "Tarife - Spain",
     "subtitle": "Los Lances Beach"
   },
   {
     "id": 6,
     "image": "/assets/cappadocia-2000w.webp",
+    "background": "/assets/cappadocia.webp",
     "title": "Cappadocia - Turkey",
     "subtitle": "Göreme Valley"
   }
