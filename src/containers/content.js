@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Content } from '../components';
 import { CardSlider } from '../components';
 import { Hero } from '../components';
@@ -12,23 +12,21 @@ export function ContentContainer(props) {
     currentCardIndex,
     setCurrentCardIndex,
     translateXValue,
-    setTranslateXValue
+    setTranslateXValue,
+    isProgressAnimationPlay,
+    setIsProgressAnimationPlay,
   } = props;
-  
-
-
-
-
-
 
   const handleLeftChevronClick = () => {
     if (currentCardIndex > 0) {
+      setIsProgressAnimationPlay(false);
       setCurrentCardIndex((currentCardIndex) => currentCardIndex - 1);
       setTranslateXValue((translateXValue) => (translateXValue += 270));
     }
   };
   const handleRightChevronClick = () => {
     if (currentCardIndex < cardData.length - 1) {
+      setIsProgressAnimationPlay(false);
       setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
       setTranslateXValue((translateXValue) => (translateXValue -= 270));
     }
@@ -37,16 +35,30 @@ export function ContentContainer(props) {
     const denominator = (cardData.length - 1) / currentCardIndex;
     return (1 / denominator) * 100;
   };
+
+  useEffect(() => {
+    let timeout = null;
+    clearTimeout(timeout);
+    if (!isProgressAnimationPlay) {
+      timeout = setTimeout(() => {
+        setIsProgressAnimationPlay(true);
+        clearTimeout(timeout);
+      }, [5000]);
+    }
+    return () => clearTimeout(timeout);
+  }, [currentCardIndex, isProgressAnimationPlay, setIsProgressAnimationPlay]);
+
   return (
     <Content>
       <Content.Wrapper>
         <Hero>
+          <Hero.Title>{cardData[currentCardIndex].title}</Hero.Title>
           <Hero.Wrapper>
-            <Hero.Title>{cardData[currentCardIndex].title}</Hero.Title>
             <Hero.Subtitle>{cardData[currentCardIndex].subtitle}</Hero.Subtitle>
             <Hero.Text>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
-              fugiat id necessitatibus perferendis sunt nam.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus soluta vel, doloremque qui, ipsum blanditiis libero
+              eius corporis rem eveniet excepturi necessitatibus iste.
             </Hero.Text>
             <Hero.Box>
               <Hero.Button
@@ -78,10 +90,10 @@ export function ContentContainer(props) {
               transform: translateX(${translateXValue}px);
             `}
           >
-            {cardData.map((data, i) => (
+            {cardData.slice(1).map((data, i) => (
               <CardSlider.Card
                 first={i === 0}
-                background={data.image}
+                background={data.background}
                 key={data.id}
                 css={`
                   box-shadow: ${currentCardIndex >= 1 &&

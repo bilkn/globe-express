@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div`
   padding: 0 65px;
-  padding-bottom: 7rem;
+  padding-bottom: 50px;
   width: 100%;
 `;
 

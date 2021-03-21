@@ -1,7 +1,5 @@
 import styled from 'styled-components/macro';
 
-
-
 export const Container = styled.div`
   flex-shrink: 0;
   min-width: 60%;
@@ -15,7 +13,7 @@ export const Wrapper = styled.div`
   overflow: hidden;
 `;
 export const Card = styled.div`
-  background: url(${(props) => props.background}) center no-repeat;
+  background: url(${(props) => props.background})  no-repeat;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 15px 15px 50px #000;
@@ -32,11 +30,12 @@ export const Card = styled.div`
   width: 230px;
 `;
 export const Title = styled.h2`
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  line-height: 2.5em;
 `;
 export const Subtitle = styled.h3`
   text-transform: uppercase;
+  width: 85%;
 `;
 
 export const Controls = styled.div`
@@ -65,7 +64,8 @@ export const Button = styled.button`
 export const LinearProgress = styled.div`
   background: #ffffffa8;
   flex-shrink: 0;
-  width: 45%;
+  max-width: 500px;
+  width: 30vw;
 `;
 
 export const LinearProgressBar = styled.div`

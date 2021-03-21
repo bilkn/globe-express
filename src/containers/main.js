@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Main } from '../components';
 import { ContentContainer } from './content';
 import { CardSlider } from '../components';
-import { progressin, progressout } from '../animations';
+import { progress } from '../animations';
 import 'styled-components/macro';
-
+import cardData from '../fixtures/card-slider.json';
 export function MainContainer(props) {
   const {
     currentCardIndex,
@@ -13,15 +13,19 @@ export function MainContainer(props) {
     setTranslateXValue,
   } = props;
 
+  const [isProgressAnimationPlay, setIsProgressAnimationPlay] = useState(true);
+  
   const handleProgressAnimation = () => {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
     setTranslateXValue((translateXValue) => translateXValue - 270);
   };
 
+
   return (
     <Main>
       <CardSlider.LinearProgress
         css={`
+          max-width: initial;
           position: fixed;
           top: 0;
           left: 0;
@@ -32,7 +36,8 @@ export function MainContainer(props) {
           onAnimationIteration={handleProgressAnimation}
           onAnimationEnd={handleProgressAnimation}
           css={`
-            animation: ${progressin} 5s linear 3 50ms;
+            animation: ${currentCardIndex < cardData.length - 1 && isProgressAnimationPlay ? progress : 'none'} 5s linear
+              ${cardData.length - 1} 50ms forwards;
             width: 100%;
           `}
         />
@@ -42,6 +47,8 @@ export function MainContainer(props) {
         setCurrentCardIndex={setCurrentCardIndex}
         translateXValue={translateXValue}
         setTranslateXValue={setTranslateXValue}
+        isProgressAnimationPlay = {isProgressAnimationPlay}
+        setIsProgressAnimationPlay = {setIsProgressAnimationPlay}
       />
     </Main>
   );
