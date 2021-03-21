@@ -12,3 +12,13 @@ export const progress = keyframes`
     transform: translateX(100%);
   }
 `;
+
+export const slideInBottom = keyframes`
+  from {
+    transform: translateY(100%)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+`;

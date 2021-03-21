@@ -2,11 +2,13 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.header`
   align-items: center;
-  color: whitesmoke;
+  color: white;
   display: flex;
   height: 60px;
   justify-content: space-between;
   padding: 2.5em 1.5em;
+  position: relative;
+  z-index: 1;
 `;
 export const Logo = styled.h1`
   align-items:center;
@@ -41,10 +43,10 @@ export const Button = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  color: whitesmoke;
+  color: inherit;
   transition: color 150ms;
   &:hover {
-    color: #f5f5f5ab;
+    color: #ffffffc2;
   }
 `;
 export const Wrapper = styled.div`

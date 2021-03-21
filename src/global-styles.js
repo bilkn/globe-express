@@ -15,6 +15,7 @@ html, body {
         -webkit-font-smoothing: antialiased;
         overflow: hidden;
     }
+
     #root {
         height: 100%;
         position: relative;

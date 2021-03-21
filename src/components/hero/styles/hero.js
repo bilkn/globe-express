@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { slideInBottom } from '../../../animations';
 
 export const Container = styled.div`
   color: white;
@@ -22,6 +23,7 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.h3`
+  animation: ${slideInBottom} 700ms;
   font-size: 4rem;
   text-transform: uppercase;
 `;
