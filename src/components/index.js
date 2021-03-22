@@ -5,3 +5,4 @@ export { default as Hero } from './hero';
 export { default as Main } from './main';
 export { default as Background } from './background';
 export { default as Loading } from './loading';
+export { default as MobileNavMenu } from './mobile-nav-menu';

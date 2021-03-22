@@ -11,6 +11,9 @@ export const Wrapper = styled.div`
   padding: 65px 40px;
   transition: transform 300ms 10ms;
   overflow: hidden;
+  @media (max-width:64rem) {
+    display: none;
+  }
 `;
 export const Card = styled.div`
   background: url(${(props) => props.background}) no-repeat;
@@ -28,10 +31,6 @@ export const Card = styled.div`
   transition: box-shadow 200ms 15ms;
   white-space: normal;
   width: 230px;
-
-  @media (max-width:64rem) {
-    display: none;
-  }
 `;
 export const Title = styled.h2`
   font-size: 0.8rem;
@@ -77,7 +76,6 @@ export const LinearProgress = styled.div`
   background: #ffffffa8;
   flex-shrink: 0;
   max-width: 500px;
-  transition: width 300ms;
   width: 30vw;
   @media (max-width: 80em) {
     width: 25vw;

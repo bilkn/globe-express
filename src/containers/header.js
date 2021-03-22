@@ -6,15 +6,15 @@ import 'styled-components/macro';
 export function HeaderContainer({ children }) {
   return (
     <Header>
-      <Header.Logo>
+      <Header.LogoWrapper>
         <Globe2
           css={`
             margin-right: 16px;
           `}
           size="36px"
         />
-        Globe Express
-      </Header.Logo>
+        <Header.Logo>Globe Express</Header.Logo>
+      </Header.LogoWrapper>
       <Header.Wrapper>
         <Header.Nav>
           <Header.Menu>
@@ -33,14 +33,23 @@ export function HeaderContainer({ children }) {
           </Header.Menu>
         </Header.Nav>
         <Header.Box>
-          <Header.Button 
+          <Header.Button
             css={`
               margin-right: 15px;
+              @media (max-width: 50em) {
+               margin: 0;
+              }
             `}
           >
             <Search size="24" />
           </Header.Button>
-          <Header.Button>
+          <Header.Button
+            css={`
+              @media (max-width: 50em) {
+                display: none;
+              }
+            `}
+          >
             <Download size="24" />
           </Header.Button>
         </Header.Box>

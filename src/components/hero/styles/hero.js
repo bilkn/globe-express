@@ -4,11 +4,13 @@ import { slideInBottom } from '../../../animations';
 export const Container = styled.div`
   color: white;
   flex-shrink: 0;
+  margin-bottom: 2em;
   padding-top: 65px;
   position: relative;
   width: 40%;
 
   @media (max-width: 64em) {
+    padding: 0;
     width: initial;
   }
 `;
@@ -20,8 +22,8 @@ export const Wrapper = styled.div`
   height: 350px;
   position: relative;
   @media (max-width: 64em) {
-    height: initial;
     text-align: center;
+    height: 280px;
   }
 `;
 
@@ -66,7 +68,6 @@ export const Box = styled.div`
   display: flex;
   flex-basis: 100%;
   @media (max-width: 64em) {
-    flex-basis: initial;
     justify-content: center;
   }
 `;

@@ -68,6 +68,9 @@ export function ContentContainer(props) {
                   border-radius: 50%;
                   margin-right: 20px;
                   padding: 0.7rem;
+                  @media (max-width: 64em) {
+                    display: none;
+                  }
                 `}
               >
                 <Bookmark size="20" />
@@ -117,7 +120,14 @@ export function ContentContainer(props) {
               >
                 <ChevronLeft size="24px" />
               </CardSlider.Button>
-              <CardSlider.Button onClick={handleRightChevronClick}>
+              <CardSlider.Button
+                onClick={handleRightChevronClick}
+                css={`
+                  @media (max-width: 64em) {
+                   order: 4;
+                  }
+                `}
+              >
                 <ChevronRight size="24px" />
               </CardSlider.Button>
             </CardSlider.Box>
