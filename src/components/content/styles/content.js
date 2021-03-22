@@ -4,8 +4,18 @@ export const Container = styled.div`
   padding: 0 65px;
   padding-bottom: 50px;
   width: 100%;
+  @media (max-width: 64em) {
+    height: auto;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
+
+  @media (max-width: 64em) {
+    align-items: center;
+    flex-direction: column;
+    height: auto !important;
+    justify-content: center;
+  }
 `;
