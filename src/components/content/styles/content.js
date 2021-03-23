@@ -8,6 +8,8 @@ export const Container = styled.div`
     height: auto;
   }
   @media (max-width: 30em) {
+    max-height: 600px;
+    height: calc(100% - 60px);
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -21,5 +23,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     height: auto !important;
     justify-content: center;
+
+    @media (max-width: 30em) {
+      height: 100% !important;
+      justify-content: space-between;
+    }
   }
 `;

@@ -13,6 +13,7 @@ export const Container = styled.div`
     padding: 0;
     width: initial;
   }
+
 `;
 
 export const Wrapper = styled.div`
