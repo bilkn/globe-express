@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  LogoWrapper,
   Logo,
   Nav,
   Menu,
@@ -8,7 +9,6 @@ import {
   Box,
   Button,
   Wrapper,
-  Icon,
 } from './styles/header';
 
 function Header({ children, ...restProps }) {
@@ -30,6 +30,11 @@ Header.Wrapper = function HeaderWrapper({ children, ...restProps }) {
 Header.Box = function HeaderBox({ children, ...restProps }) {
   return <Box {...restProps}>{children}</Box>;
 };
+
+Header.LogoWrapper = function HeaderLogoWrapper({ ...restProps }) {
+  return <LogoWrapper {...restProps}></LogoWrapper>;
+};
+
 Header.Logo = function HeaderLogo({ ...restProps }) {
   return <Logo {...restProps}></Logo>;
 };

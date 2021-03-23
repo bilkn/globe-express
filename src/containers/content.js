@@ -68,6 +68,9 @@ export function ContentContainer(props) {
                   border-radius: 50%;
                   margin-right: 20px;
                   padding: 0.7rem;
+                  @media (max-width: 64em) {
+                    display: none;
+                  }
                 `}
               >
                 <Bookmark size="20" />
@@ -108,22 +111,24 @@ export function ContentContainer(props) {
             ))}
           </CardSlider.Wrapper>
           <CardSlider.Controls>
-            <CardSlider.Box>
-              <CardSlider.Button
-                onClick={handleLeftChevronClick}
-                css={`
-                  margin-right: 25px;
-                `}
-              >
-                <ChevronLeft size="24px" />
-              </CardSlider.Button>
-              <CardSlider.Button onClick={handleRightChevronClick}>
-                <ChevronRight size="24px" />
-              </CardSlider.Button>
-            </CardSlider.Box>
+            <CardSlider.Button onClick={handleLeftChevronClick}>
+              <ChevronLeft size="24px" />
+            </CardSlider.Button>
+            <CardSlider.Button onClick={handleRightChevronClick} css={`
+              @media (max-width:30em) {
+                margin-right: 0;
+                order: 4;
+              }
+            `}>
+              <ChevronRight size="24px" />
+            </CardSlider.Button>
+
             <CardSlider.LinearProgress
               css={`
                 margin-right: 25px;
+                @media (max-width: 30em) {
+                  display: none;
+                }
               `}
             >
               <CardSlider.LinearProgressBar

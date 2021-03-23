@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HeaderContainer } from '../containers/header';
 import { MainContainer } from '../containers/main';
 import { LoadingContainer } from '../containers/loading';
-import { Background } from '../components';
+import { Background, MobileNavMenu } from '../components';
 import cardData from '../fixtures/card-slider.json';
 
 export default function Home() {
@@ -23,8 +23,21 @@ export default function Home() {
 
   return (
     <>
-      <LoadingContainer isDataLoaded={isDataLoaded}/>
-      <Background bg={cardData[currentCardIndex].image}>
+      {/*  <MobileNavMenu>
+        <MobileNavMenu.List>
+          <MobileNavMenu.Item>Home</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Holidays</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Destinations</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Flights</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Offers</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Contacts</MobileNavMenu.Item>
+        </MobileNavMenu.List>
+      </MobileNavMenu> */}
+      <LoadingContainer isDataLoaded={isDataLoaded} />
+      <Background
+        bg={cardData[currentCardIndex].image}
+        bgSmall={cardData[currentCardIndex].background}
+      >
         <HeaderContainer />
         <MainContainer
           currentCardIndex={currentCardIndex}

@@ -16,4 +16,8 @@ export const Container = styled.div`
     display: block;
     background-color: rgba(0, 0, 0, 0.1);
   }
+
+  @media (max-width: 64em) {
+    background-image: url(${(props) => props.bgSmall});
+  }
 `;

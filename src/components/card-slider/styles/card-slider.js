@@ -11,9 +11,12 @@ export const Wrapper = styled.div`
   padding: 65px 40px;
   transition: transform 300ms 10ms;
   overflow: hidden;
+  @media (max-width: 64rem) {
+    display: none;
+  }
 `;
 export const Card = styled.div`
-  background: url(${(props) => props.background})  no-repeat;
+  background: url(${(props) => props.background}) no-repeat;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 15px 15px 50px #000;
@@ -42,10 +45,12 @@ export const Controls = styled.div`
   align-items: center;
   display: flex;
   padding: 0 40px;
-`;
 
-export const Box = styled.div`
-  margin-right: 25px;
+  @media (max-width: 64em) {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export const Button = styled.button`
@@ -53,11 +58,15 @@ export const Button = styled.button`
   border: 1px solid white;
   border-radius: 50%;
   color: white;
-  padding: 20px;
+  margin-right: 25px;
+  padding: min(20vw, 25px);
   transition: background 200ms ease;
   outline: none;
   &:hover {
     background: #dcdcdc5e;
+  }
+  @media (max-width: 90em) {
+    padding: 20px;
   }
 `;
 
@@ -66,6 +75,9 @@ export const LinearProgress = styled.div`
   flex-shrink: 0;
   max-width: 500px;
   width: 30vw;
+  @media (max-width: 80em) {
+    width: 25vw;
+  }
 `;
 
 export const LinearProgressBar = styled.div`
@@ -77,4 +89,10 @@ export const LinearProgressBar = styled.div`
 export const Counter = styled.p`
   color: whitesmoke;
   font-size: 4rem;
+  @media (max-width: 90em) {
+    font-size: calc(3.3vw + 1em);
+  }
+  @media (max-width: 30em) {
+    margin-right: 25px;
+  }
 `;
