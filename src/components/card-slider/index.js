@@ -6,7 +6,6 @@ import {
   Title,
   Subtitle,
   Controls,
-  Box,
   Button,
   LinearProgress,
   LinearProgressBar,
@@ -36,9 +35,6 @@ CardSlider.Controls = function CardSliderControls({ children, ...restProps }) {
   return <Controls {...restProps}>{children}</Controls>;
 };
 
-CardSlider.Box = function CardSliderBox({ children, ...restProps }) {
-  return <Box {...restProps}>{children}</Box>;
-};
 CardSlider.Button = function CardSliderButton({ children, ...restProps }) {
   return <Button {...restProps}>{children}</Button>;
 };

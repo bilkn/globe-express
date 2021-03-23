@@ -7,6 +7,10 @@ export const Container = styled.div`
   @media (max-width: 64em) {
     height: auto;
   }
+  @media (max-width: 30em) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 export const Wrapper = styled.div`

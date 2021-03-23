@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   padding: 65px 40px;
   transition: transform 300ms 10ms;
   overflow: hidden;
-  @media (max-width:64rem) {
+  @media (max-width: 64rem) {
     display: none;
   }
 `;
@@ -45,6 +45,7 @@ export const Controls = styled.div`
   align-items: center;
   display: flex;
   padding: 0 40px;
+
   @media (max-width: 64em) {
     justify-content: center;
     margin: 0;
@@ -52,15 +53,12 @@ export const Controls = styled.div`
   }
 `;
 
-export const Box = styled.div`
-  margin-right: 25px;
-`;
-
 export const Button = styled.button`
   background: none;
   border: 1px solid white;
   border-radius: 50%;
   color: white;
+  margin-right: 25px;
   padding: min(20vw, 25px);
   transition: background 200ms ease;
   outline: none;
@@ -89,9 +87,12 @@ export const LinearProgressBar = styled.div`
 `;
 
 export const Counter = styled.p`
-    color: whitesmoke;
+  color: whitesmoke;
   font-size: 4rem;
   @media (max-width: 90em) {
     font-size: calc(3.3vw + 1em);
+  }
+  @media (max-width: 30em) {
+    margin-right: 25px;
   }
 `;

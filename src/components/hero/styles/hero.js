@@ -39,7 +39,7 @@ export const Title = styled.h2`
     text-align: center;
   }
   @media (max-width: 100em) {
-    font-size: calc(1.5vw + 0.3em);
+    font-size: calc(1.5vw + 0.4em);
   }
 `;
 
