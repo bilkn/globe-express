@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <>
-     {/*  <MobileNavMenu>
+      {/*  <MobileNavMenu>
         <MobileNavMenu.List>
           <MobileNavMenu.Item>Home</MobileNavMenu.Item>
           <MobileNavMenu.Item>Holidays</MobileNavMenu.Item>
@@ -34,7 +34,10 @@ export default function Home() {
         </MobileNavMenu.List>
       </MobileNavMenu> */}
       <LoadingContainer isDataLoaded={isDataLoaded} />
-      <Background bg={cardData[currentCardIndex].image}>
+      <Background
+        bg={cardData[currentCardIndex].image}
+        bgSmall={cardData[currentCardIndex].background}
+      >
         <HeaderContainer />
         <MainContainer
           currentCardIndex={currentCardIndex}

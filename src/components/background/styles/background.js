@@ -18,6 +18,6 @@ export const Container = styled.div`
   }
 
   @media (max-width: 64em) {
-    background-position: center;
+    background-image: url(${(props) => props.bgSmall});
   }
 `;

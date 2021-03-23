@@ -2,6 +2,7 @@
   {
     "id": 1,
     "image": "/assets/saint-antonien-2000w.webp",
+    "background": "/assets/saint-antonien.webp",
     "title": "Switzerland - Alps",
     "subtitle": "Saint Antönien"
   },
