@@ -10,7 +10,10 @@ export function LoadingContainer({ isDataLoaded }) {
         z-index: ${!isDataLoaded ? 2 : 0};
       `}
     >
-      <Loading.Img src={globeGIF} alt="Animated globe icon" />
+      <Loading.Wrapper>
+        <Loading.Img src={globeGIF} alt="Animated globe icon" />
+        <Loading.Text>Travelling...</Loading.Text>
+      </Loading.Wrapper>
     </Loading>
   );
 }

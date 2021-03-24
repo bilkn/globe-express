@@ -17,8 +17,8 @@ export const Wrapper = styled.div`
   @media (max-width: 64em) {
     width: 100%;
   }
-  @media (max-width: 48em) {
-    display: none;
+  @media (max-width:48em) {
+    justify-content: flex-end;
   }
 `;
 
@@ -38,6 +38,9 @@ export const Nav = styled.nav`
   @media (max-width: 64em) {
     margin: 0;
     width: 100%;
+  }
+  @media (max-width: 48em) {
+    display: none;
   }
 `;
 export const Menu = styled.ul`

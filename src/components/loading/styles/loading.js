@@ -12,7 +12,15 @@ export const Container = styled.div`
   width: 100vw;
 `;
 
+export const Wrapper = styled.div`
+  margin: auto;
+`
+
 export const Img = styled.img`
   display: block;
-  margin: auto;
+  margin-bottom: 1em;
+`;
+
+export const Text = styled.p`
+  font-size: 1.1rem;
 `;
