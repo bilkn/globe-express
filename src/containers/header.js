@@ -1,9 +1,11 @@
-import { Header } from '../components';
+import { Header, MobileNavMenu } from '../components';
 import { Search } from '@styled-icons/bootstrap/Search';
 import { Download } from '@styled-icons/entypo/Download';
 import { Globe2 } from '@styled-icons/bootstrap/Globe2';
 import 'styled-components/macro';
+import { useState } from 'react';
 export function HeaderContainer({ children }) {
+  const [click, setClick] = useState(false);
   return (
     <Header>
       <Header.LogoWrapper>
@@ -36,8 +38,8 @@ export function HeaderContainer({ children }) {
           <Header.Button
             css={`
               margin-right: 15px;
-              @media (max-width: 50em) {
-               margin: 0;
+              @media (max-width: 48em) {
+                display: none;
               }
             `}
           >
@@ -53,6 +55,9 @@ export function HeaderContainer({ children }) {
             <Download size="24" />
           </Header.Button>
         </Header.Box>
+        <MobileNavMenu.Button onClick={() => setClick(!click)}>
+          <MobileNavMenu.Icon clicked={click} />
+        </MobileNavMenu.Button>
       </Header.Wrapper>
       {children}
     </Header>
