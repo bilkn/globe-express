@@ -10,6 +10,7 @@ export const Container = styled.div`
   top: 0;
   overflow: hidden;
   width: 100vw;
+  z-index: 1000000;
 `;
 
 export const Wrapper = styled.div`

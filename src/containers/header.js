@@ -3,18 +3,19 @@ import { Search } from '@styled-icons/bootstrap/Search';
 import { Download } from '@styled-icons/entypo/Download';
 import { Globe2 } from '@styled-icons/bootstrap/Globe2';
 import 'styled-components/macro';
+import useMatchMedia from '../hooks/useMatchMedia';
 
 export function HeaderContainer(props) {
   const { showMobileNav, setShowMobileNav, children } = props;
-
+  const { isMatched } = useMatchMedia('(max-width:48rem)');
   return (
     <Header>
       <Header.LogoWrapper>
         <Globe2
           css={`
-            color: ${showMobileNav ? "black" : "white"};
+            color: ${showMobileNav && isMatched ? 'black' : 'white'};
             margin-right: 16px;
-            transition: color 100ms;
+            transition: color 300ms;
           `}
           size="36px"
         />

@@ -10,8 +10,8 @@ export const Container = styled.nav`
   left: 0;
   position: fixed;
   transform: ${({ isActive }) =>
-    isActive ? 'translateY(0)' : 'translateY(-1500px)'};
-  transition: transform 300ms;
+    isActive ? 'translateY(0)' : 'translateY(-4000px)'};
+  transition: transform 500ms;
   top: 0;
   width: 100vw;
   z-index: 100;
@@ -85,36 +85,30 @@ export const Button = styled.button`
 `;
 
 export const Icon = styled.span`
-  background-color: ${(props) => (props.clicked ? 'transparent' : 'black')};
+  background-color: ${(props) => (props.clicked ? 'transparent' : 'white')};
   display: inline-block;
   height: 2px;
   position: relative;
+  transition: background-color 300ms;
   width: 25px;
 
   &::before,
   &::after {
     content: '';
-    background-color: black;
+    background-color: ${(props) => (props.clicked ? 'black' : 'white')};
     display: inline-block;
     height: 2px;
     left: 0;
     position: absolute;
-    transition: transform 300ms;
+    transition: 300ms;
+    transition-property: background-color, transform;
     width: 25px;
-  }
-
-  &::before {
-    top: -8px;
-  }
-  &::after {
-    top: 8px;
   }
 
   &::before {
     transform: ${(props) => (props.clicked ? 'rotate(135deg)' : 'rotate(0)')};
     top: ${(props) => (props.clicked ? '0' : '-8px')};
   }
-
   &::after {
     transform: ${(props) => (props.clicked ? 'rotate(-135deg)' : 'rotate(0)')};
     top: ${(props) => (props.clicked ? '0' : '8px')};
