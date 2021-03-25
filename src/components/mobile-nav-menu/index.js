@@ -4,6 +4,7 @@ import {
   Wrapper,
   List,
   Link,
+  Text,
   AttributionLink,
   Item,
   Button,
@@ -31,6 +32,13 @@ MobileNavMenu.Item = function MobileNavMenuItem({ children, ...restProps }) {
 
 MobileNavMenu.Link = function MobileNavMenuLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
+};
+
+MobileNavMenu.Text = function MobileNavMenuText({
+  children,
+  ...restProps
+}) {
+  return <Text {...restProps}>{children}</Text>;
 };
 
 MobileNavMenu.AttributionLink = function MobileNavMenuAttributionLink({

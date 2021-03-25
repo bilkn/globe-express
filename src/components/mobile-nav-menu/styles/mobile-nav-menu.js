@@ -1,14 +1,16 @@
 import styled from 'styled-components/macro';
 
 export const Container = styled.nav`
+  align-items: center;
   background: whitesmoke;
   display: none;
   flex-direction: column;
   height: 100vh;
+  justify-content: space-between;
   left: 0;
   position: fixed;
   transform: ${({ isActive }) =>
-    isActive ? 'translateY(0)' : 'translateY(-100%)'};
+    isActive ? 'translateY(0)' : 'translateY(-1500px)'};
   transition: transform 300ms;
   top: 0;
   width: 100vw;
@@ -19,9 +21,7 @@ export const Container = styled.nav`
   }
 `;
 
-export const Wrapper = styled.div`
-  margin: auto;
-`;
+export const Wrapper = styled.div``;
 
 export const Link = styled.a`
   color: black;
@@ -33,6 +33,10 @@ export const Link = styled.a`
   }
 `;
 
+export const Text = styled.p`
+  padding: 0.5em;
+  text-align: center;
+`;
 export const AttributionLink = styled.a`
   color: blue;
   text-decoration: none;
@@ -43,8 +47,8 @@ export const AttributionLink = styled.a`
 `;
 
 export const List = styled.ul`
-  margin: auto;
-  margin-top: 5em;
+  margin-bottom: 1em;
+  margin-top: 6em;
   width: 100%;
 `;
 export const Item = styled.li`
@@ -58,6 +62,10 @@ export const Item = styled.li`
   text-align: center;
   &:hover {
     background: white;
+  }
+
+  @media (max-width: 40em) {
+    padding: 0.5em;
   }
 `;
 

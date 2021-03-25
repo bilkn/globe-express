@@ -43,7 +43,11 @@ export default function Home() {
           <MobileNavMenu.Item>Contacts</MobileNavMenu.Item>
         </MobileNavMenu.List>
         <MobileNavMenu.Wrapper>
-          <MobileNavMenu.List>
+          <MobileNavMenu.List
+            css={`
+              margin: 0;
+            `}
+          >
             <MobileNavMenu.Link
               css={`
                 margin-right: 15px;
@@ -58,16 +62,16 @@ export default function Home() {
           </MobileNavMenu.List>
         </MobileNavMenu.Wrapper>
         <MobileNavMenu.Wrapper>
-          <p>
+          <MobileNavMenu.Text>
             &#169; 2021 Coded by Bilkan Konus, inspired by{' '}
             <MobileNavMenu.AttributionLink href="https://dribbble.com/Giulio_Cuscito">
               Giulio Cuscito
             </MobileNavMenu.AttributionLink>
             .
-          </p>
+          </MobileNavMenu.Text>
         </MobileNavMenu.Wrapper>
       </MobileNavMenu>
-      
+
       <LoadingContainer isDataLoaded={isDataLoaded} />
       <Background
         bg={cardData[currentCardIndex].image}
