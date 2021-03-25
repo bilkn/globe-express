@@ -1,6 +1,6 @@
 # Globe Express - Travel Agency Product Landing Page.
 
-A product landing page, inspired by [Giulio Cusciot](https://dribbble.com/shots/11012652--Timed-Cards-Opening)'s design. 
+A product landing page, inspired by [Giulio Cuscito](https://dribbble.com/shots/11012652--Timed-Cards-Opening)'s design. 
 
 [Globe Express](https://globe-express.netlify.app/)
 
