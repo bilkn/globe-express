@@ -7,8 +7,8 @@ export const Container = styled.nav`
   height: 100vh;
   left: 0;
   position: fixed;
-  /*  transform: ${({ isActive }) =>
-    isActive ? 'translateY(0)' : 'translateY(-100%)'}; */
+  transform: ${({ isActive }) =>
+    isActive ? 'translateY(0)' : 'translateY(-100%)'};
   transition: transform 300ms;
   top: 0;
   width: 100vw;
