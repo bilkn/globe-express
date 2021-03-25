@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 export const Container = styled.nav`
   background: whitesmoke;
   display: none;
+  flex-direction: column;
   height: 100vh;
   left: 0;
   position: fixed;
@@ -18,8 +19,32 @@ export const Container = styled.nav`
   }
 `;
 
+export const Wrapper = styled.div`
+  margin: auto;
+`;
+
+export const Link = styled.a`
+  color: black;
+  display: inline-block;
+  transition: color 200ms;
+
+  &:hover {
+    color: #000000a6;
+  }
+`;
+
+export const AttributionLink = styled.a`
+  color: blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const List = styled.ul`
   margin: auto;
+  margin-top: 5em;
   width: 100%;
 `;
 export const Item = styled.li`

@@ -60,7 +60,11 @@ export const MenuItem = styled.li`
   margin-bottom: -2px;
   margin-right: 30px;
   padding: 5px 0;
+  transition: color 0.2s;
 
+  &:hover {
+    color: #ffffffde;
+  }
   &::after {
     content: '';
     background: #f7ba53;
