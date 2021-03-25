@@ -1,9 +1,9 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro';
 
 export const Container = styled.main`
   align-items: center;
   display: flex;
-  height: 100%;
+  flex-basis: 100%;
   position: relative;
   z-index: 1;
 `;

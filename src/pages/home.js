@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { HeaderContainer } from '../containers/header';
 import { MainContainer } from '../containers/main';
 import { LoadingContainer } from '../containers/loading';
+import { FooterContainer } from '../containers/footer';
 import { Background, MobileNavMenu } from '../components';
+import { Github, Linkedin } from '@styled-icons/bootstrap';
 import cardData from '../fixtures/card-slider.json';
 import 'styled-components/macro';
 
@@ -25,24 +27,50 @@ export default function Home() {
 
   return (
     <>
-      {showMobileNav && (
-        <MobileNavMenu isActive={showMobileNav}>
-          <MobileNavMenu.List>
-            <MobileNavMenu.Item
+      <MobileNavMenu isActive={showMobileNav}>
+        <MobileNavMenu.List>
+          <MobileNavMenu.Item
+            css={`
+              border-top-width: 1px;
+            `}
+          >
+            Home
+          </MobileNavMenu.Item>
+          <MobileNavMenu.Item>Holidays</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Destinations</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Flights</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Offers</MobileNavMenu.Item>
+          <MobileNavMenu.Item>Contacts</MobileNavMenu.Item>
+        </MobileNavMenu.List>
+        <MobileNavMenu.Wrapper>
+          <MobileNavMenu.List
+            css={`
+              margin: 0;
+            `}
+          >
+            <MobileNavMenu.Link
               css={`
-                border-top-width: 1px;
+                margin-right: 15px;
               `}
+              href="https://github.com/bilkn"
             >
-              Home
-            </MobileNavMenu.Item>
-            <MobileNavMenu.Item>Holidays</MobileNavMenu.Item>
-            <MobileNavMenu.Item>Destinations</MobileNavMenu.Item>
-            <MobileNavMenu.Item>Flights</MobileNavMenu.Item>
-            <MobileNavMenu.Item>Offers</MobileNavMenu.Item>
-            <MobileNavMenu.Item>Contacts</MobileNavMenu.Item>
+              <Github size="36px" />
+            </MobileNavMenu.Link>
+            <MobileNavMenu.Link href="https://www.linkedin.com/in/bilkankonus/">
+              <Linkedin size="36px" />
+            </MobileNavMenu.Link>
           </MobileNavMenu.List>
-        </MobileNavMenu>
-      )}
+        </MobileNavMenu.Wrapper>
+        <MobileNavMenu.Wrapper>
+          <MobileNavMenu.Text>
+            &#169; 2021 Coded by Bilkan Konus, inspired by{' '}
+            <MobileNavMenu.AttributionLink href="https://dribbble.com/Giulio_Cuscito">
+              Giulio Cuscito
+            </MobileNavMenu.AttributionLink>
+            .
+          </MobileNavMenu.Text>
+        </MobileNavMenu.Wrapper>
+      </MobileNavMenu>
 
       <LoadingContainer isDataLoaded={isDataLoaded} />
       <Background
@@ -61,6 +89,7 @@ export default function Home() {
           isProgressAnimationPlay={isProgressAnimationPlay}
           setIsProgressAnimationPlay={setIsProgressAnimationPlay}
         />
+        <FooterContainer />
       </Background>
     </>
   );
