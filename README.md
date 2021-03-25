@@ -45,7 +45,7 @@ Have fun :)
 ```
 
 ## Built With
-* React - The JavaScript framework used
+* [React](https://reactjs.org/) - The JavaScript framework used
 * [Styled Components Library](https://styled-components.com/) - CSS in JS tool
 
 ## Contributors
