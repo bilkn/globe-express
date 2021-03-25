@@ -3,15 +3,18 @@ import { Search } from '@styled-icons/bootstrap/Search';
 import { Download } from '@styled-icons/entypo/Download';
 import { Globe2 } from '@styled-icons/bootstrap/Globe2';
 import 'styled-components/macro';
-import { useState } from 'react';
-export function HeaderContainer({ children }) {
-  const [click, setClick] = useState(false);
+
+export function HeaderContainer(props) {
+  const { showMobileNav, setShowMobileNav, children } = props;
+
   return (
     <Header>
       <Header.LogoWrapper>
         <Globe2
           css={`
+            color: ${showMobileNav ? "black" : "white"};
             margin-right: 16px;
+            transition: color 100ms;
           `}
           size="36px"
         />
@@ -38,6 +41,9 @@ export function HeaderContainer({ children }) {
           <Header.Button
             css={`
               margin-right: 15px;
+              @media (max-width: 50em) {
+                margin-right: 0;
+              }
               @media (max-width: 48em) {
                 display: none;
               }
@@ -55,8 +61,8 @@ export function HeaderContainer({ children }) {
             <Download size="24" />
           </Header.Button>
         </Header.Box>
-        <MobileNavMenu.Button onClick={() => setClick(!click)}>
-          <MobileNavMenu.Icon clicked={click} />
+        <MobileNavMenu.Button onClick={() => setShowMobileNav(!showMobileNav)}>
+          <MobileNavMenu.Icon clicked={showMobileNav} />
         </MobileNavMenu.Button>
       </Header.Wrapper>
       {children}

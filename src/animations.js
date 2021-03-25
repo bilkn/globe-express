@@ -22,3 +22,4 @@ export const slideInBottom = keyframes`
     transform: translateY(0)
   }
 `;
+

@@ -8,7 +8,7 @@ export const Container = styled.header`
   justify-content: space-between;
   padding: 0 1.5em;
   position: relative;
-  z-index: 1;
+  z-index: 110;
 `;
 
 export const Wrapper = styled.div`
@@ -28,6 +28,7 @@ export const LogoWrapper = styled.div`
 `;
 export const Logo = styled.h1`
   font-size: 1.5rem;
+  user-select:none;
   @media (max-width: 64em) {
     display: none;
   }
