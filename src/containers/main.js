@@ -41,6 +41,7 @@ export function MainContainer(props) {
                 ? progress
                 : 'none'}
               5s linear ${cardData.length - 1} 50ms forwards;
+            height: 4px;
             width: 100%;
           `}
         />
