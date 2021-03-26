@@ -10,8 +10,8 @@ export const Container = styled.nav`
   left: 0;
   position: fixed;
   transform: ${({ isActive }) =>
-    isActive ? 'translateY(0)' : 'translateY(-4000px)'};
-  transition: transform 500ms;
+    isActive ? 'translateY(0)' : 'translateY(-100vh)'};
+  transition: transform 0.4s;
   top: 0;
   width: 100vw;
   z-index: 100;
@@ -58,8 +58,8 @@ export const Item = styled.li`
   cursor: pointer;
   font-size: 1.6rem;
   padding: 1em 0;
-  transition: background-color 200ms;
   text-align: center;
+  transition: background-color 200ms;
   &:hover {
     background: white;
   }
