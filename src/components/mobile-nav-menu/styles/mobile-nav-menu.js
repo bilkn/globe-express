@@ -7,11 +7,12 @@ export const Container = styled.nav`
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+  min-height: 720px;
   left: 0;
   position: fixed;
   transform: ${({ isActive }) =>
-    isActive ? 'translateY(0)' : 'translateY(-1500px)'};
-  transition: transform 300ms;
+    isActive ? 'translateY(0)' : 'translateY(-100%)'};
+  transition: transform 0.4s;
   top: 0;
   width: 100vw;
   z-index: 100;
@@ -26,7 +27,7 @@ export const Wrapper = styled.div``;
 export const Link = styled.a`
   color: black;
   display: inline-block;
-  transition: color 200ms;
+  transition: color 100ms;
 
   &:hover {
     color: #000000a6;
@@ -58,8 +59,8 @@ export const Item = styled.li`
   cursor: pointer;
   font-size: 1.6rem;
   padding: 1em 0;
-  transition: background-color 200ms;
   text-align: center;
+  transition: background-color 200ms;
   &:hover {
     background: white;
   }
@@ -85,36 +86,30 @@ export const Button = styled.button`
 `;
 
 export const Icon = styled.span`
-  background-color: ${(props) => (props.clicked ? 'transparent' : 'black')};
+  background-color: ${(props) => (props.clicked ? 'transparent' : 'white')};
   display: inline-block;
   height: 2px;
   position: relative;
+  transition: background-color 300ms;
   width: 25px;
 
   &::before,
   &::after {
     content: '';
-    background-color: black;
+    background-color: ${(props) => (props.clicked ? 'black' : 'white')};
     display: inline-block;
     height: 2px;
     left: 0;
     position: absolute;
-    transition: transform 300ms;
+    transition: 300ms;
+    transition-property: background-color, transform;
     width: 25px;
-  }
-
-  &::before {
-    top: -8px;
-  }
-  &::after {
-    top: 8px;
   }
 
   &::before {
     transform: ${(props) => (props.clicked ? 'rotate(135deg)' : 'rotate(0)')};
     top: ${(props) => (props.clicked ? '0' : '-8px')};
   }
-
   &::after {
     transform: ${(props) => (props.clicked ? 'rotate(-135deg)' : 'rotate(0)')};
     top: ${(props) => (props.clicked ? '0' : '8px')};

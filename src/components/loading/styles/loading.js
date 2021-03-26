@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   background: white;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   left: 0;
   position: absolute;
@@ -10,11 +11,12 @@ export const Container = styled.div`
   top: 0;
   overflow: hidden;
   width: 100vw;
+  z-index: 1000000;
 `;
 
 export const Wrapper = styled.div`
   margin: auto;
-`
+`;
 
 export const Img = styled.img`
   display: block;
@@ -23,4 +25,10 @@ export const Img = styled.img`
 
 export const Text = styled.p`
   font-size: 1.1rem;
+`;
+
+export const Attribution = styled.p`
+  align-items: flex-end;
+  padding: 1em;
+  text-align: center;
 `;

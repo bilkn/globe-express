@@ -7,8 +7,8 @@ export const Container = styled.div`
     height: auto;
   }
   @media (max-width: 30em) {
+    height: calc(100% - 60px); // 60px is header height.
     max-height: 600px;
-    height: calc(100% - 60px);
     padding-left: 16px;
     padding-right: 16px;
   }

@@ -11,9 +11,27 @@ export function LoadingContainer({ isDataLoaded }) {
       `}
     >
       <Loading.Wrapper>
-        <Loading.Img src={globeGIF} alt="Animated globe icon" />
+        <Loading.Img
+          src={globeGIF}
+          width="96"
+          height="96"
+          alt="Animated globe icon"
+        />
         <Loading.Text>Travelling...</Loading.Text>
       </Loading.Wrapper>
+      <Loading.Attribution>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://icons8.com/icons/set/globe--v1"
+        >
+          Globe icon
+        </a>{' '}
+        icon by{' '}
+        <a target="_blank" rel="noreferrer" href="https://icons8.com">
+          Icons8
+        </a>
+      </Loading.Attribution>
     </Loading>
   );
 }

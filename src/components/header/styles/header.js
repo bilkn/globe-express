@@ -78,6 +78,8 @@ export const MenuItem = styled.li`
     width: 100%;
   }
 `;
+
+export const Link = styled.a``;
 export const Box = styled.div`
   align-items: center;
   display: flex;
