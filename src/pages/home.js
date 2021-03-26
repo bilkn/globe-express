@@ -45,20 +45,36 @@ export default function Home() {
         <MobileNavMenu.Wrapper>
           <MobileNavMenu.List
             css={`
+              display: flex;
+              flex-direction: row;
               margin: 0;
             `}
           >
-            <MobileNavMenu.Link
+            <MobileNavMenu.Item
               css={`
+                border: none;
                 margin-right: 15px;
+                &:hover {
+                  background: none !important;
+                }
               `}
-              href="https://github.com/bilkn"
             >
-              <Github size="36px" />
-            </MobileNavMenu.Link>
-            <MobileNavMenu.Link href="https://www.linkedin.com/in/bilkankonus/">
-              <Linkedin size="36px" />
-            </MobileNavMenu.Link>
+              <MobileNavMenu.Link href="https://github.com/bilkn">
+                <Github size="36px" />
+              </MobileNavMenu.Link>
+            </MobileNavMenu.Item>
+            <MobileNavMenu.Item
+              css={`
+                border: none;
+                &:hover {
+                  background: none !important;
+                }
+              `}
+            >
+              <MobileNavMenu.Link href="https://www.linkedin.com/in/bilkankonus/">
+                <Linkedin size="36px" />
+              </MobileNavMenu.Link>
+            </MobileNavMenu.Item>
           </MobileNavMenu.List>
         </MobileNavMenu.Wrapper>
         <MobileNavMenu.Wrapper>

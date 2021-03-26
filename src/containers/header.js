@@ -49,6 +49,7 @@ export function HeaderContainer(props) {
                 display: none;
               }
             `}
+            aria-label="Search"
           >
             <Search size="24" />
           </Header.Button>
@@ -58,11 +59,12 @@ export function HeaderContainer(props) {
                 display: none;
               }
             `}
+            aria-label="Download"
           >
             <Download size="24" />
           </Header.Button>
         </Header.Box>
-        <MobileNavMenu.Button onClick={() => setShowMobileNav(!showMobileNav)}>
+        <MobileNavMenu.Button onClick={() => setShowMobileNav(!showMobileNav)} aria-label="Close">
           <MobileNavMenu.Icon clicked={showMobileNav} />
         </MobileNavMenu.Button>
       </Header.Wrapper>

@@ -72,6 +72,7 @@ export function ContentContainer(props) {
                     display: none;
                   }
                 `}
+                aria-label="Add bookmark"
               >
                 <Bookmark size="20" />
               </Hero.Button>
@@ -111,15 +112,22 @@ export function ContentContainer(props) {
             ))}
           </CardSlider.Wrapper>
           <CardSlider.Controls>
-            <CardSlider.Button onClick={handleLeftChevronClick}>
+            <CardSlider.Button
+              onClick={handleLeftChevronClick}
+              aria-label="Previous place"
+            >
               <ChevronLeft size="24px" />
             </CardSlider.Button>
-            <CardSlider.Button onClick={handleRightChevronClick} css={`
-              @media (max-width:30em) {
-                margin-right: 0;
-                order: 4;
-              }
-            `}>
+            <CardSlider.Button
+              onClick={handleRightChevronClick}
+              css={`
+                @media (max-width: 30em) {
+                  margin-right: 0;
+                  order: 4;
+                }
+              `}
+              aria-label="Next place"
+            >
               <ChevronRight size="24px" />
             </CardSlider.Button>
 

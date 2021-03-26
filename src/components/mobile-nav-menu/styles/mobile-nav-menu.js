@@ -26,7 +26,7 @@ export const Wrapper = styled.div``;
 export const Link = styled.a`
   color: black;
   display: inline-block;
-  transition: color 200ms;
+  transition: color 100ms;
 
   &:hover {
     color: #000000a6;
