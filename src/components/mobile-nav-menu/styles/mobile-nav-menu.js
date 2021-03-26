@@ -16,9 +16,13 @@ export const Container = styled.nav`
   top: 0;
   width: 100vw;
   z-index: 100;
-
+  
   @media (max-width: 48rem) {
     display: flex;
+  }
+
+  @media (max-width: 30em) {
+    min-height: 400px;
   }
 `;
 
