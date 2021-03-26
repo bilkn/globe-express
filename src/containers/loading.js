@@ -6,8 +6,8 @@ export function LoadingContainer({ isDataLoaded }) {
   return (
     <Loading
       css={`
-      /*   opacity: ${!isDataLoaded ? 1 : 0};
-        z-index: ${!isDataLoaded ? 2 : 0}; */
+        opacity: ${!isDataLoaded ? 1 : 0};
+        z-index: ${!isDataLoaded ? 2 : 0};
       `}
     >
       <Loading.Wrapper>

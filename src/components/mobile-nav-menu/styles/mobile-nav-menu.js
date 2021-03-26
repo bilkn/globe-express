@@ -7,10 +7,11 @@ export const Container = styled.nav`
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+  min-height: 720px;
   left: 0;
   position: fixed;
   transform: ${({ isActive }) =>
-    isActive ? 'translateY(0)' : 'translateY(-100vh)'};
+    isActive ? 'translateY(0)' : 'translateY(-100%)'};
   transition: transform 0.4s;
   top: 0;
   width: 100vw;

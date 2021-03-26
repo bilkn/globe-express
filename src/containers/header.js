@@ -24,17 +24,27 @@ export function HeaderContainer(props) {
       <Header.Wrapper>
         <Header.Nav>
           <Header.Menu>
-            <Header.MenuItem>HOME</Header.MenuItem>
-            <Header.MenuItem>HOLIDAYS</Header.MenuItem>
-            <Header.MenuItem>DESTINATIONS</Header.MenuItem>
-            <Header.MenuItem>FLIGHTS</Header.MenuItem>
-            <Header.MenuItem>OFFERS</Header.MenuItem>
+            <Header.MenuItem>
+              <Header.Link>HOME</Header.Link>
+            </Header.MenuItem>
+            <Header.MenuItem>
+              <Header.Link>HOLIDAYS</Header.Link>
+            </Header.MenuItem>
+            <Header.MenuItem>
+              <Header.Link>DESTINATIONS</Header.Link>
+            </Header.MenuItem>
+            <Header.MenuItem>
+              <Header.Link>FLIGHTS</Header.Link>
+            </Header.MenuItem>
+            <Header.MenuItem>
+              <Header.Link>OFFERS</Header.Link>
+            </Header.MenuItem>
             <Header.MenuItem
               css={`
                 margin: 0;
               `}
             >
-              CONTACT
+              <Header.Link>CONTACT</Header.Link>
             </Header.MenuItem>
           </Header.Menu>
         </Header.Nav>
@@ -64,7 +74,10 @@ export function HeaderContainer(props) {
             <Download size="24" />
           </Header.Button>
         </Header.Box>
-        <MobileNavMenu.Button onClick={() => setShowMobileNav(!showMobileNav)} aria-label="Close">
+        <MobileNavMenu.Button
+          onClick={() => setShowMobileNav(!showMobileNav)}
+          aria-label="Close"
+        >
           <MobileNavMenu.Icon clicked={showMobileNav} />
         </MobileNavMenu.Button>
       </Header.Wrapper>
