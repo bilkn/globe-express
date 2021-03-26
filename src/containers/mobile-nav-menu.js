@@ -1,7 +1,7 @@
 import React from 'react';
 import { MobileNavMenu } from '../components';
 import { Github, Linkedin } from '@styled-icons/bootstrap';
-import "styled-components/macro";
+import 'styled-components/macro';
 
 export function MobileNavMenuContainer({ showMobileNav }) {
   return (
@@ -12,13 +12,23 @@ export function MobileNavMenuContainer({ showMobileNav }) {
             border-top-width: 1px;
           `}
         >
-          Home
+          <MobileNavMenu.Link>Home</MobileNavMenu.Link>
         </MobileNavMenu.Item>
-        <MobileNavMenu.Item>Holidays</MobileNavMenu.Item>
-        <MobileNavMenu.Item>Destinations</MobileNavMenu.Item>
-        <MobileNavMenu.Item>Flights</MobileNavMenu.Item>
-        <MobileNavMenu.Item>Offers</MobileNavMenu.Item>
-        <MobileNavMenu.Item>Contacts</MobileNavMenu.Item>
+        <MobileNavMenu.Item>
+          <MobileNavMenu.Link>Holidays</MobileNavMenu.Link>
+        </MobileNavMenu.Item>
+        <MobileNavMenu.Item>
+          <MobileNavMenu.Link>Destinations</MobileNavMenu.Link>
+        </MobileNavMenu.Item>
+        <MobileNavMenu.Item>
+          <MobileNavMenu.Link>Flights</MobileNavMenu.Link>
+        </MobileNavMenu.Item>
+        <MobileNavMenu.Item>
+          <MobileNavMenu.Link>Offers</MobileNavMenu.Link>
+        </MobileNavMenu.Item>
+        <MobileNavMenu.Item>
+          <MobileNavMenu.Link>Contacts</MobileNavMenu.Link>
+        </MobileNavMenu.Item>
       </MobileNavMenu.List>
       <MobileNavMenu.Wrapper>
         <MobileNavMenu.List
@@ -37,7 +47,10 @@ export function MobileNavMenuContainer({ showMobileNav }) {
               }
             `}
           >
-            <MobileNavMenu.Link href="https://github.com/bilkn">
+            <MobileNavMenu.Link
+              href="https://github.com/bilkn"
+              aria-label="GitHub"
+            >
               <Github size="36px" />
             </MobileNavMenu.Link>
           </MobileNavMenu.Item>
@@ -49,7 +62,10 @@ export function MobileNavMenuContainer({ showMobileNav }) {
               }
             `}
           >
-            <MobileNavMenu.Link href="https://www.linkedin.com/in/bilkankonus/">
+            <MobileNavMenu.Link
+              href="https://www.linkedin.com/in/bilkankonus/"
+              aria-label="LinkedIn"
+            >
               <Linkedin size="36px" />
             </MobileNavMenu.Link>
           </MobileNavMenu.Item>
