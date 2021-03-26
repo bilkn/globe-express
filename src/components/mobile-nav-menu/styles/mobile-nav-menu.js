@@ -7,12 +7,12 @@ export const Container = styled.nav`
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  min-height: 720px;
+  min-height: max-content;
   left: 0;
   position: fixed;
   transform: ${({ isActive }) =>
-    isActive ? 'translateY(0)' : 'translateY(-100%)'};
-  transition: transform 0.4s;
+    isActive ? 'translateY(0)' : 'translateY(-200%)'};
+  transition: ease-in-out transform 0.4s;
   top: 0;
   width: 100vw;
   z-index: 100;
@@ -22,7 +22,7 @@ export const Container = styled.nav`
   }
 
   @media (max-width: 30em) {
-    min-height: 400px;
+    min-height: 350px;
   }
 `;
 
