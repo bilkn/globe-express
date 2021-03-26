@@ -6,14 +6,27 @@ export function LoadingContainer({ isDataLoaded }) {
   return (
     <Loading
       css={`
-        opacity: ${!isDataLoaded ? 1 : 0};
-        z-index: ${!isDataLoaded ? 2 : 0};
+      /*   opacity: ${!isDataLoaded ? 1 : 0};
+        z-index: ${!isDataLoaded ? 2 : 0}; */
       `}
     >
       <Loading.Wrapper>
         <Loading.Img src={globeGIF} alt="Animated globe icon" />
         <Loading.Text>Travelling...</Loading.Text>
       </Loading.Wrapper>
+      <Loading.Attribution>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://icons8.com/icons/set/globe--v1"
+        >
+          Globe icon
+        </a>{' '}
+        icon by{' '}
+        <a target="_blank" rel="noreferrer" href="https://icons8.com">
+          Icons8
+        </a>
+      </Loading.Attribution>
     </Loading>
   );
 }

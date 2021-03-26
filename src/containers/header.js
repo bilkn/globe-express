@@ -49,6 +49,7 @@ export function HeaderContainer(props) {
                 display: none;
               }
             `}
+            aria-label="Search"
           >
             <Search size="24" />
           </Header.Button>
@@ -58,6 +59,7 @@ export function HeaderContainer(props) {
                 display: none;
               }
             `}
+            aria-label="Download"
           >
             <Download size="24" />
           </Header.Button>
