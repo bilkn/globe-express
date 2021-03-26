@@ -6,6 +6,7 @@ export const Container = styled.div`
   display:flex;
   flex-direction: column;
   height: 100%;
+  min-height: max-content; 
   transition: background 400ms 100ms;
 
   &::after {

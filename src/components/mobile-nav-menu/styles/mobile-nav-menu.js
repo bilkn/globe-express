@@ -7,12 +7,11 @@ export const Container = styled.nav`
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  min-height: 720px;
   left: 0;
   position: fixed;
   transform: ${({ isActive }) =>
-    isActive ? 'translateY(0)' : 'translateY(-100%)'};
-  transition: transform 0.4s;
+    isActive ? 'translateY(0)' : 'translateY(-3000px)'};
+  transition: ease-in-out transform 0.4s;
   top: 0;
   width: 100vw;
   z-index: 100;
@@ -21,9 +20,6 @@ export const Container = styled.nav`
     display: flex;
   }
 
-  @media (max-width: 30em) {
-    min-height: 400px;
-  }
 `;
 
 export const Wrapper = styled.div``;
