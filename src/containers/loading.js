@@ -2,14 +2,10 @@ import React from 'react';
 import { Loading } from '../components';
 import globeGIF from '../icons8-globe.gif';
 import 'styled-components/macro';
-export function LoadingContainer({ isDataLoaded }) {
+
+export function LoadingContainer() {
   return (
-    <Loading
-      css={`
-        opacity: ${!isDataLoaded ? 1 : 0};
-        z-index: ${!isDataLoaded ? 2 : 0};
-      `}
-    >
+    <Loading>
       <Loading.Wrapper>
         <Loading.Img
           src={globeGIF}

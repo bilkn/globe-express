@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import 'styled-components/macro';
 import { Content } from '../components';
 import { CardSlider } from '../components';
 import { Hero } from '../components';
 import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark';
 import { ChevronLeft, ChevronRight } from '@styled-icons/bootstrap/';
+import { progress } from '../animations';
 import cardData from '../fixtures/card-slider.json';
-import 'styled-components/macro';
 
 export function ContentContainer(props) {
   const {

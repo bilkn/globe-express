@@ -13,7 +13,10 @@ html, body {
         height:100%;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
-        overflow: hidden;
+        overflow: hidden; 
+         @media (max-width:30em) {
+            overflow: auto;
+        } 
     }
 
     #root {
