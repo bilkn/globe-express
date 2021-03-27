@@ -63,10 +63,10 @@ export default function Home() {
 
       <Background
         bg={`${cardData[currentCardIndex].image}${
-          detectWebP() ? '.webp' : 'jpg'
+          detectWebP() ? '.webp' : '.jpg'
         }`}
         bgSmall={`${cardData[currentCardIndex].background}${
-          detectWebP() ? '.webp' : 'jpg'
+          detectWebP() ? '.webp' : '.jpg'
         }`}
       >
         <HeaderContainer
