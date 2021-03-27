@@ -5,8 +5,8 @@ import { CardSlider } from '../components';
 import { Hero } from '../components';
 import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark';
 import { ChevronLeft, ChevronRight } from '@styled-icons/bootstrap/';
-import { progress } from '../animations';
 import cardData from '../fixtures/card-slider.json';
+import { detectWebP } from '../helpers/detectWebP';
 
 export function ContentContainer(props) {
   const {
@@ -98,7 +98,9 @@ export function ContentContainer(props) {
             {cardData.slice(1).map((data, i) => (
               <CardSlider.Card
                 first={i === 0}
-                background={data.background}
+                background={`${data.background}${
+                  detectWebP() ? '.webp' : '.jpg'
+                }`}
                 key={data.id}
                 css={`
                   box-shadow: ${currentCardIndex >= 1 &&

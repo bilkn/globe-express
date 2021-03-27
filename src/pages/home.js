@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import 'styled-components/macro';
 import { HeaderContainer } from '../containers/header';
 import { MainContainer } from '../containers/main';
 import { LoadingContainer } from '../containers/loading';
@@ -7,7 +8,7 @@ import { MobileNavMenuContainer } from '../containers/mobile-nav-menu';
 import { Background, CardSlider } from '../components';
 import { progress } from '../animations';
 import cardData from '../fixtures/card-slider.json';
-import 'styled-components/macro';
+import { detectWebP } from '../helpers/detectWebP';
 
 export default function Home() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -25,6 +26,7 @@ export default function Home() {
     window.addEventListener('load', handleLoad);
     return () => window.removeEventListener('load', handleLoad);
   }, []);
+
   const handleProgressAnimation = () => {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
     setTranslateXValue((translateXValue) => translateXValue - 270);
@@ -60,8 +62,12 @@ export default function Home() {
       <MobileNavMenuContainer showMobileNav={showMobileNav} />
 
       <Background
-        bg={cardData[currentCardIndex].image}
-        bgSmall={cardData[currentCardIndex].background}
+        bg={`${cardData[currentCardIndex].image}${
+          detectWebP() ? '.webp' : 'jpg'
+        }`}
+        bgSmall={`${cardData[currentCardIndex].background}${
+          detectWebP() ? '.webp' : 'jpg'
+        }`}
       >
         <HeaderContainer
           showMobileNav={showMobileNav}
