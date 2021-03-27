@@ -1,10 +1,13 @@
 import React from 'react';
-import Home from './pages/home';
+import { Loading } from './components';
+const Home = React.lazy(() => import('./pages/home'));
 
 function App() {
   return (
     <>
-      <Home />
+      <React.Suspense fallback={<Loading />}>
+        <Home />
+      </React.Suspense>
     </>
   );
 }

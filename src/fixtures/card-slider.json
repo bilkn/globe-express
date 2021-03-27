@@ -1,43 +1,43 @@
 [
   {
     "id": 1,
-    "image": "/assets/saint-antonien-2000w.webp",
-    "background": "/assets/saint-antonien.webp",
+    "image": "/assets/images/large/saint-antonien-2000w",
+    "background": "/assets/images/small/saint-antonien",
     "title": "Switzerland - Alps",
     "subtitle": "Saint Antönien"
   },
   {
     "id": 1,
-    "image": "/assets/japan-alps-2000w.webp",
-    "background": "/assets/japan-alps.webp",
+    "image": "/assets/images/large/japan-alps-2000w",
+    "background": "/assets/images/small/japan-alps",
     "title": "Japan Alphs",
     "subtitle": "Nagano Prefecture"
   },
   {
     "id": 3,
-    "image": "/assets/morocco-2000w.webp",
-    "background":"/assets/morocco.webp",
+    "image": "/assets/images/large/morocco-2000w",
+    "background":"/assets/images/small/morocco",
     "title": "Saharan Desert - Morocco",
     "subtitle": "Marrakech Merzouga"
   },
   {
     "id": 4,
-    "image": "/assets/yosemite-2000w.webp",
-    "background":"/assets/yosemite.webp",
+    "image": "/assets/images/large/yosemite-2000w",
+    "background":"/assets/images/small/yosemite",
     "title": "Sierra Nevada - United States",
     "subtitle": "Yosemite National Park"
   },
   {
     "id": 5,
-    "image": "/assets/los-lances-2000w.webp",
-    "background": "/assets/los-lances.webp",
+    "image": "/assets/images/large/los-lances-2000w",
+    "background": "/assets/images/small/los-lances",
     "title": "Tarife - Spain",
     "subtitle": "Los Lances Beach"
   },
   {
     "id": 6,
-    "image": "/assets/cappadocia-2000w.webp",
-    "background": "/assets/cappadocia.webp",
+    "image": "/assets/images/large/cappadocia-2000w",
+    "background": "/assets/images/small/cappadocia",
     "title": "Cappadocia - Turkey",
     "subtitle": "Göreme Valley"
   }

@@ -3,10 +3,10 @@ import { useCallback, useEffect, useState } from 'react';
 function useMatchMedia(query) {
   const [isMatched, setIsMatched] = useState(false);
 
-  const matchMedia = useCallback(() => {
+  const matchMedia = useCallback((query) => {
     const mql = window.matchMedia(query);
     return mql.matches;
-  }, [query]);
+  }, []);
 
   useEffect(() => {
     if (matchMedia(query)) {

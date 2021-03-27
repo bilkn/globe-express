@@ -23,3 +23,20 @@ export const slideInBottom = keyframes`
   }
 `;
 
+export const loadingDot = keyframes`
+  from {
+    content: ""  
+  }
+
+  33% {  
+    content: "."  
+  }
+
+  66% {
+    content:".."
+  }
+  
+  to { 
+    content:"..."
+  }
+`;

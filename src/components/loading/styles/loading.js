@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-
+import { loadingDot } from '../../../animations';
 export const Container = styled.div`
   background: white;
   display: flex;
@@ -31,4 +31,11 @@ export const Attribution = styled.p`
   align-items: flex-end;
   padding: 1em;
   text-align: center;
+`;
+
+export const Span = styled.span`
+  ::before {
+    animation: ${loadingDot} 1s infinite;
+    content: '';
+  }
 `;

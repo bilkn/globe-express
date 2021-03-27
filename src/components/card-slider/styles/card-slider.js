@@ -51,6 +51,10 @@ export const Controls = styled.div`
     margin: 0;
     padding: 0;
   }
+  
+  @media (max-width: 30em) {
+    margin-top: 2em;
+  }
 `;
 
 export const Button = styled.button`
