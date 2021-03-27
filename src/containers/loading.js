@@ -13,7 +13,9 @@ export function LoadingContainer() {
           height="96"
           alt="Animated globe icon"
         />
-        <Loading.Text>Travelling...</Loading.Text>
+        <Loading.Text>
+          Travelling<Loading.Span></Loading.Span>
+        </Loading.Text>
       </Loading.Wrapper>
       <Loading.Attribution>
         <a

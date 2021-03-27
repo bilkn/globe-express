@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Wrapper, Img, Text, Attribution } from './styles/loading';
+import { Container, Wrapper, Img, Text, Attribution, Span } from './styles/loading';
 
 function Loading({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -19,6 +19,10 @@ Loading.Text = function LoadingText({ children, ...restProps }) {
 
 Loading.Attribution = function LoadingAttribution({ children, ...restProps }) {
   return <Attribution {...restProps}> {children} </Attribution>;
+};
+
+Loading.Span = function LoadingSpan({ children, ...restProps }) {
+  return <Span {...restProps}> {children} </Span>;
 };
 
 export default Loading;
