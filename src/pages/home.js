@@ -17,6 +17,7 @@ export default function Home() {
 
   const handleLoad = () => {
     setIsProgressAnimationPlay(true);
+    console.log("Data is loaded.")
   };
 
   useEffect(() => {
