@@ -15,10 +15,10 @@ export const Container = styled.div`
     bottom: 0;
     content: '';
     display: block;
+    left: 0;
     position: absolute;
     right: 0;
     top: 0;
-    left: 0;
     width: 100%;
   }
 

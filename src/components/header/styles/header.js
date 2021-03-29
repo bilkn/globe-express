@@ -66,8 +66,8 @@ export const MenuItem = styled.li`
     color: #ffffffde;
   }
   &::after {
-    content: '';
     background: #f7ba53;
+    content: '';
     display: block;
     height: 2px;
     transition: width 0.3s;

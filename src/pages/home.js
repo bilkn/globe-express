@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import 'styled-components/macro';
 import { HeaderContainer } from '../containers/header';
 import { MainContainer } from '../containers/main';
@@ -15,15 +15,15 @@ export default function Home() {
   const [isProgressAnimationPlay, setIsProgressAnimationPlay] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
 
-  const handleLoad = () => {
+
+  const handleLoad = useCallback(() => {
     setIsProgressAnimationPlay(true);
-    console.log("Data is loaded.")
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener('load', handleLoad);
     return () => window.removeEventListener('load', handleLoad);
-  }, []);
+  }, [handleLoad]);
 
   const handleProgressAnimation = () => {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
