@@ -8,16 +8,18 @@ import { Background, CardSlider } from '../components';
 import { progress } from '../animations';
 import cardData from '../fixtures/card-slider.json';
 import { detectWebP } from '../helpers/detectWebP';
+import { LoadingContainer } from '../containers/loading';
 
 export default function Home() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [translateXValue, setTranslateXValue] = useState(0);
   const [isProgressAnimationPlay, setIsProgressAnimationPlay] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
-
+  const [showLoading, setShowLoading] = useState(true);
 
   const handleLoad = useCallback(() => {
     setIsProgressAnimationPlay(true);
+    setShowLoading(false);
   }, []);
 
   useEffect(() => {
@@ -29,7 +31,7 @@ export default function Home() {
     setCurrentCardIndex((currentCardIndex) => currentCardIndex + 1);
     setTranslateXValue((translateXValue) => translateXValue - 270);
   };
-
+  if (showLoading) return <LoadingContainer />
   return (
     <>
       <CardSlider.LinearProgress

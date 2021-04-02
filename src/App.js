@@ -1,13 +1,28 @@
 import React from 'react';
-import { LoadingContainer } from './containers/loading';
-const Home = React.lazy(() => import('./pages/home'));
+import cardData from './fixtures/card-slider.json';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { detectWebP } from './helpers/detectWebP';
+import {Home} from "./pages";
 
 function App() {
+  const mql = window.matchMedia('(min-width:64em)');
   return (
     <>
-      <React.Suspense fallback={<LoadingContainer />}>
+      <HelmetProvider>
+        <Helmet>
+          {cardData.map((data) => (
+            <link
+              rel="preload"
+              href={`${mql.matches ? data.image : data.background}${
+                detectWebP() ? '.webp' : '.jpg'
+              }`}
+              as="image"
+              key={data.image}
+            />
+          ))}
+        </Helmet>
         <Home />
-      </React.Suspense>
+      </HelmetProvider>
     </>
   );
 }
