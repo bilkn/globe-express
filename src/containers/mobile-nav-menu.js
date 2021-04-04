@@ -48,8 +48,8 @@ export function MobileNavMenuContainer({ showMobileNav }) {
             `}
           >
             <MobileNavMenu.Link
-              href="https://github.com/bilkn"
-              aria-label="GitHub"
+              href="https://github.com/bilkn/globe-express"
+              aria-label="GitHub repo"
             >
               <Github size="36px" />
             </MobileNavMenu.Link>
