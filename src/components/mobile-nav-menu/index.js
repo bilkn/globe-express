@@ -31,13 +31,14 @@ MobileNavMenu.Item = function MobileNavMenuItem({ children, ...restProps }) {
 };
 
 MobileNavMenu.Link = function MobileNavMenuLink({ children, ...restProps }) {
-  return <Link {...restProps}>{children}</Link>;
+  return (
+    <Link target="_blank" {...restProps}>
+      {children}
+    </Link>
+  );
 };
 
-MobileNavMenu.Text = function MobileNavMenuText({
-  children,
-  ...restProps
-}) {
+MobileNavMenu.Text = function MobileNavMenuText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
 

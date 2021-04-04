@@ -1,17 +1,14 @@
 import React from 'react';
-import { Loading } from './components';
-import { Helmet } from 'react-helmet';
 import cardData from './fixtures/card-slider.json';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { detectWebP } from './helpers/detectWebP';
-
-const Home = React.lazy(() => import('./pages/home'));
+import {Home} from "./pages";
 
 function App() {
   const mql = window.matchMedia('(min-width:64em)');
-
   return (
     <>
-      {
+      <HelmetProvider>
         <Helmet>
           {cardData.map((data) => (
             <link
@@ -24,10 +21,8 @@ function App() {
             />
           ))}
         </Helmet>
-      }
-      <React.Suspense fallback={<Loading />}>
         <Home />
-      </React.Suspense>
+      </HelmetProvider>
     </>
   );
 }

@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import 'styled-components/macro';
-import { Content } from '../components';
-import { CardSlider } from '../components';
-import { Hero } from '../components';
+import { Content, CardSlider, Hero } from '../components';
 import { Bookmark } from '@styled-icons/boxicons-regular/Bookmark';
 import { ChevronLeft, ChevronRight } from '@styled-icons/bootstrap/';
 import cardData from '../fixtures/card-slider.json';

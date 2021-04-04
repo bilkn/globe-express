@@ -9,7 +9,7 @@
         "package-lock.json": true,
         "node_modules": true,
         ".vscode": true,
-        "package.json": true,
+        "package.json": false,
         "README.md": true
     },
     "explorerExclude.backup": null
