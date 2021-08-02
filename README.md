@@ -23,7 +23,7 @@ npm install npm@latest -g
 1. Clone the repo
 
 ``` 
-git clone https://github.com/bilkn/motive-me.git
+git clone https://github.com/bilkn/globe-express.git
 ```
 
 2. Run npm install inside project root
